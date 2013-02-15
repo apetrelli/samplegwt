@@ -6,6 +6,12 @@
   <packaging>pom</packaging>
   <name>UtilGWT</name>
   <description>Utilities for GWT and integrated things.</description>
+  <licenses>
+	<license>
+		<name>Apache License 2.0</name>
+		<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+	</license>
+  </licenses>
   <modules>
   	<module>utilgwt-model</module>
   	<module>utilgwt-web</module>
