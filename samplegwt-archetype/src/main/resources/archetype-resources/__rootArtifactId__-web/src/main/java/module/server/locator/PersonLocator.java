@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import ${package}.model.domain.Person;
 import ${package}.model.service.PersonService;
-import com.github.utilgwt.web.server.gwt.DeletableLocator;
+import com.github.apetrelli.gwtintegration.web.server.gwt.DeletableLocator;
 
 @Component
 public class PersonLocator extends DeletableLocator<Person, Long> {
@@ -22,7 +22,7 @@ public class PersonLocator extends DeletableLocator<Person, Long> {
 	}
 
 	@Override
-	public Person find(Class<? extends Person> clazz, Long id) {
+	public Person find(Long id) {
 		return service.findOne(id);
 	}
 

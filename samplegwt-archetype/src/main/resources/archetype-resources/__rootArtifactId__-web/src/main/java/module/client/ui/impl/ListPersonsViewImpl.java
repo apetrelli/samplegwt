@@ -9,7 +9,7 @@ import java.util.List;
 import ${package}.module.client.mvp.place.PersonDetailPlace;
 import ${package}.module.client.requestfactory.proxy.PersonProxy;
 import ${package}.module.client.ui.ListPersonsView;
-import com.github.utilgwt.web.client.ui.impl.AbstractMvpView;
+import com.github.apetrelli.gwtintegration.web.client.ui.impl.AbstractMvpView;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;

@@ -28,11 +28,11 @@
 	</context-param>
 	<listener>
 		<display-name>hibernate-init</display-name>
-		<listener-class>com.github.utilgwt.web.server.hibernate.HibernateInitContextListener</listener-class>
+		<listener-class>com.github.apetrelli.gwtintegration.web.server.hibernate.HibernateInitContextListener</listener-class>
 	</listener>
 	<filter>
 		<filter-name>gwtCacheControl</filter-name>
-		<filter-class>com.github.utilgwt.web.server.gwt.GWTCacheControlFilter</filter-class>
+		<filter-class>com.github.apetrelli.gwtintegration.web.server.gwt.GWTCacheControlFilter</filter-class>
 	</filter>
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>
@@ -40,7 +40,7 @@
 	</filter>
 	<filter>
 		<filter-name>RequestContextFilter</filter-name>
-		<filter-class>com.github.utilgwt.web.server.spring.RequestContextFilter</filter-class>
+		<filter-class>com.github.apetrelli.gwtintegration.web.server.spring.RequestContextFilter</filter-class>
 	</filter>
 
 	<filter>
@@ -99,12 +99,12 @@
 
 	<servlet>
 		<servlet-name>requestFactory</servlet-name>
-		<servlet-class>com.github.utilgwt.web.server.gwt.CustomRequestFactoryServlet</servlet-class>
+		<servlet-class>com.github.apetrelli.gwtintegration.web.server.gwt.CustomRequestFactoryServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet>
 	    <servlet-name>remoteLogging</servlet-name>
-	    <servlet-class>com.github.utilgwt.web.server.gwt.RemoteLoggingServiceImpl</servlet-class>
+	    <servlet-class>com.github.apetrelli.gwtintegration.web.server.gwt.RemoteLoggingServiceImpl</servlet-class>
 	    <init-param>
 	    	<param-name>SYMBOL_MAPS_DIR</param-name>
 	    	<param-value>/WEB-INF/deploy/${parentArtifactId}/symbolMaps</param-value>

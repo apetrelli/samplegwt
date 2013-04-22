@@ -3,7 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${package}.module.client.mvp.place;
 
-import com.github.utilgwt.web.shared.StringUtils;
+import com.github.apetrelli.gwtintegration.web.shared.StringUtils;
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 

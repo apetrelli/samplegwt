@@ -6,7 +6,7 @@ package ${package}.model.service;
 import java.util.List;
 
 import ${package}.model.domain.Person;
-import com.github.utilgwt.model.service.CrudService;
+import com.github.apetrelli.gwtintegration.service.CrudService;
 
 public interface PersonService extends CrudService<Person, Long> {
 

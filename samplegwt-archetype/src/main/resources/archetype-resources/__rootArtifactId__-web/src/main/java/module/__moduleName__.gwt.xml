@@ -15,7 +15,7 @@
 	<inherits name="com.google.gwt.user.User" />
 	<inherits name="com.google.gwt.i18n.I18N"/>
 	<inherits name="com.google.gwt.resources.Resources" />
-	<inherits name="com.github.utilgwt.web.UtilGWT"/>
+	<inherits name="com.github.apetrelli.gwtintegration.web.UtilGWT"/>
 	<inherits name="${package}.shared.${moduleName}Shared"/>
 	<inherits name="org.hibernate.validator.HibernateValidator" />
 	<set-property name="compiler.stackMode" value="emulated"/>

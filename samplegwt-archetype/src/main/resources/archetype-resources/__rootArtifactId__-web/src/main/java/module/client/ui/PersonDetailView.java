@@ -4,7 +4,7 @@
 package ${package}.module.client.ui;
 
 import ${package}.module.client.ui.editor.PersonEditor;
-import com.github.utilgwt.web.client.ui.MvpView;
+import com.github.apetrelli.gwtintegration.web.client.ui.MvpView;
 
 public interface PersonDetailView extends MvpView<PersonDetailView.Presenter> {
 	

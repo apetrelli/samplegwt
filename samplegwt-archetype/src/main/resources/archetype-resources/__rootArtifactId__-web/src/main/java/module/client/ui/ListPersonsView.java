@@ -6,7 +6,7 @@ package ${package}.module.client.ui;
 import java.util.List;
 
 import ${package}.module.client.requestfactory.proxy.PersonProxy;
-import com.github.utilgwt.web.client.ui.MvpView;
+import com.github.apetrelli.gwtintegration.web.client.ui.MvpView;
 
 public interface ListPersonsView extends MvpView<ListPersonsView.Presenter> {
 	

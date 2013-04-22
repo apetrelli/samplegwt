@@ -11,8 +11,8 @@ import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 
 import ${package}.shared.shared.enums.PersonalTitle;
-import com.github.utilgwt.model.jpa.AbstractDeletable;
-import com.github.utilgwt.model.jpa.DeleteEntityListener;
+import com.github.apetrelli.gwtintegration.jpa.AbstractDeletable;
+import com.github.apetrelli.gwtintegration.jpa.DeleteEntityListener;
 
 @Entity
 @EntityListeners({ DeleteEntityListener.class })

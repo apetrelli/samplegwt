@@ -20,8 +20,8 @@
 			<version>${version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.github.utilgwt</groupId>
-			<artifactId>utilgwt-web</artifactId>
+			<groupId>com.github.apetrelli.gwtintegration</groupId>
+			<artifactId>gwt-integration-web</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
@@ -94,7 +94,12 @@
 						<module>${package}.module.${moduleName}</module>
 					</modules>
 					<copyWebapp>true</copyWebapp>
-					<extraJvmArgs>-Xmx1024m</extraJvmArgs>
+					<!-- Triggering threaded compilation to save memory.
+					The number of threads are set to 10, however the ThreadedPermutationWorkerFactory uses a maximum
+					of threads calculated as the minimum between the number of <localWorkers> and this value (10).
+					If the <localWorkers> is not specified, the Maven plugin calculates the values as the number
+					of processor threads, so usually they are lower than 10.-->
+					<extraJvmArgs>-Dgwt.jjs.permutationWorkerFactory=com.google.gwt.dev.ThreadedPermutationWorkerFactory -Dgwt.jjs.maxThreads=10</extraJvmArgs>
 				</configuration>
 				<executions>
 					<execution>

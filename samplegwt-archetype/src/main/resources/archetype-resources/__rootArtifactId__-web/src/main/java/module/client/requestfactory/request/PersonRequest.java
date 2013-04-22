@@ -5,12 +5,14 @@ package ${package}.module.client.requestfactory.request;
 
 import java.util.List;
 
+import com.github.apetrelli.gwtintegration.web.client.requestfactory.CrudRequest;
+import com.github.apetrelli.gwtintegration.web.server.gwt.GwtServiceLocator;
+import ${package}.model.service.PersonService;
 import ${package}.module.client.requestfactory.proxy.PersonProxy;
-import com.github.utilgwt.web.client.requestfactory.CrudRequest;
 import com.google.web.bindery.requestfactory.shared.Request;
-import com.google.web.bindery.requestfactory.shared.ServiceName;
+import com.google.web.bindery.requestfactory.shared.Service;
 
-@ServiceName(value = "${package}.model.service.PersonService", locator="com.github.utilgwt.web.server.gwt.GwtServiceLocator")
+@Service(value = PersonService.class, locator = GwtServiceLocator.class)
 public interface PersonRequest extends CrudRequest<PersonProxy, Long> {
 	
 	Request<PersonProxy> findOne(Long id);

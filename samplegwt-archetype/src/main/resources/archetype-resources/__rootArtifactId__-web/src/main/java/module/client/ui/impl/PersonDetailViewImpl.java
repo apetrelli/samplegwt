@@ -5,7 +5,7 @@ package ${package}.module.client.ui.impl;
 
 import ${package}.module.client.ui.PersonDetailView;
 import ${package}.module.client.ui.editor.PersonEditor;
-import com.github.utilgwt.web.client.ui.impl.AbstractMvpView;
+import com.github.apetrelli.gwtintegration.web.client.ui.impl.AbstractMvpView;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;

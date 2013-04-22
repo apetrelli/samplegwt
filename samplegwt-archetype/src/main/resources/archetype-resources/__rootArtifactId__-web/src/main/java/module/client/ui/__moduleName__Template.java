@@ -3,7 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${package}.module.client.ui;
 
-import com.github.utilgwt.web.client.ui.HasBody;
+import com.github.apetrelli.gwtintegration.web.client.ui.HasBody;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;

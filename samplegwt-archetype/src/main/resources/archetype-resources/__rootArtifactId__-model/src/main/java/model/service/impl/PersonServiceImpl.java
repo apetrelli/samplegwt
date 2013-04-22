@@ -9,16 +9,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.github.apetrelli.gwtintegration.datajpa.AbstractCrudService;
 import ${package}.model.domain.Person;
 import ${package}.model.repository.PersonRepository;
 import ${package}.model.service.PersonService;
 
 @Service
 @Transactional(readOnly=true)
-public class PersonServiceImpl implements PersonService{
+public class PersonServiceImpl extends AbstractCrudService<Person, Long, PersonRepository> implements PersonService{
 	
 	@Autowired
-	private PersonRepository repository;
+	public PersonServiceImpl(PersonRepository repository) {
+		super(repository);
+	}
 	
 	public long countAllPersons() {
 		return repository.count();
@@ -26,19 +29,5 @@ public class PersonServiceImpl implements PersonService{
 
 	public List<Person> findAllPersons() {
 		return repository.findAll();
-	}
-
-	public Person findOne(Long id) {
-		return repository.findOne(id);
-	}
-
-	@Transactional(readOnly=false)
-	public Person save(Person person) {
-		return repository.save(person);
-	}
-
-	@Transactional(readOnly=false)
-	public void delete(Long id) {
-		repository.delete(id);
 	}
 }
