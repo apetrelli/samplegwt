@@ -68,7 +68,7 @@
 
 	<filter-mapping>
 		<filter-name>gwtCacheControl</filter-name>
-		<url-pattern>/${artifactId}/${artifactId}.nocache.js</url-pattern>
+		<url-pattern>/${parentArtifactId}-web/${parentArtifactId}-web.nocache.js</url-pattern>
 	</filter-mapping>
 	<filter-mapping>
 		<filter-name>RequestContextFilter</filter-name>
