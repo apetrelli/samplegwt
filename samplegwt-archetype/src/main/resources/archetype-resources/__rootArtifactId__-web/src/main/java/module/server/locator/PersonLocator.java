@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 
 import ${package}.model.domain.Person;
 import ${package}.model.service.PersonService;
-import com.github.apetrelli.gwtintegration.web.server.gwt.DeletableLocator;
+import com.github.apetrelli.gwtintegration.hibernate.core.locator.DeproxierDeletableLocator;
 
 @Component
-public class PersonLocator extends DeletableLocator<Person, Long> {
+public class PersonLocator extends DeproxierDeletableLocator<Person, Long> {
 
 	@Autowired
 	private PersonService service;

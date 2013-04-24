@@ -28,7 +28,23 @@
 	</context-param>
 	<listener>
 		<display-name>hibernate-init</display-name>
-		<listener-class>com.github.apetrelli.gwtintegration.web.server.hibernate.HibernateInitContextListener</listener-class>
+		<listener-class>com.github.apetrelli.gwtintegration.hibernate.entitymanager.web.HibernateInitContextListener</listener-class>
+	</listener>
+	<listener>
+		<display-name>servlet-context-holder</display-name>
+		<listener-class>com.github.apetrelli.gwtintegration.requestfactory.ServletContextHolderListener</listener-class>
+	</listener>
+	<listener>
+		<display-name>application-context-holder</display-name>
+		<listener-class>com.github.apetrelli.gwtintegration.spring.web.SpringWebApplicationContextHolderListener</listener-class>
+	</listener>
+	<listener>
+		<display-name>session-locale-holder</display-name>
+		<listener-class>com.github.apetrelli.gwtintegration.spring.web.SessionLocaleHolderListener</listener-class>
+	</listener>
+	<listener>
+		<display-name>slf4j-bridge-install</display-name>
+		<listener-class>com.github.apetrelli.gwtintegration.remotelogging.Slf4jBridgeInstallListener</listener-class>
 	</listener>
 	<filter>
 		<filter-name>gwtCacheControl</filter-name>
@@ -40,7 +56,7 @@
 	</filter>
 	<filter>
 		<filter-name>RequestContextFilter</filter-name>
-		<filter-class>com.github.apetrelli.gwtintegration.web.server.spring.RequestContextFilter</filter-class>
+		<filter-class>com.github.apetrelli.gwtintegration.spring.web.RequestContextFilter</filter-class>
 	</filter>
 
 	<filter>
@@ -99,12 +115,12 @@
 
 	<servlet>
 		<servlet-name>requestFactory</servlet-name>
-		<servlet-class>com.github.apetrelli.gwtintegration.web.server.gwt.CustomRequestFactoryServlet</servlet-class>
+		<servlet-class>com.github.apetrelli.gwtintegration.spring.security.SecureRequestFactoryServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet>
 	    <servlet-name>remoteLogging</servlet-name>
-	    <servlet-class>com.github.apetrelli.gwtintegration.web.server.gwt.RemoteLoggingServiceImpl</servlet-class>
+	    <servlet-class>com.github.apetrelli.gwtintegration.remotelogging.RemoteLoggingServiceImpl</servlet-class>
 	    <init-param>
 	    	<param-name>SYMBOL_MAPS_DIR</param-name>
 	    	<param-value>/WEB-INF/deploy/${parentArtifactId}/symbolMaps</param-value>

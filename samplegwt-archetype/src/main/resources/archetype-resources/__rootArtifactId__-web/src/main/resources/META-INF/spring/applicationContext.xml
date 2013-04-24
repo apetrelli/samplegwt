@@ -22,7 +22,7 @@
                       http://www.springframework.org/schema/data/jpa
                       http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 	<bean id="resourceBundleLocator"
-		class="com.github.apetrelli.gwtintegration.web.server.validation.NoFallbackResourceBundleLocator">
+		class="com.github.apetrelli.gwtintegration.hibernate.validator.NoFallbackResourceBundleLocator">
 		<constructor-arg value="ValidationMessages" />
 	</bean>
 	<bean id="messageInterpolator"
