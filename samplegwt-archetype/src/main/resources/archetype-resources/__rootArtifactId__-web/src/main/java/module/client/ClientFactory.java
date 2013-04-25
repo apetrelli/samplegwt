@@ -6,7 +6,7 @@ package ${package}.module.client;
 import ${package}.module.client.ui.ListPersonsView;
 import ${package}.module.client.ui.PersonDetailView;
 import ${package}.module.client.ui.WelcomeView;
-import com.github.apetrelli.gwtintegration.web.client.ui.HasBody;
+import com.github.apetrelli.gwtintegration.mvp.client.ui.HasBody;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.web.bindery.event.shared.EventBus;
 

@@ -5,7 +5,7 @@ package ${package}.module.client.mvp.activity;
 
 import ${package}.module.client.ClientFactory;
 import ${package}.module.client.requestfactory.ApplicationRequestFactory;
-import com.github.apetrelli.gwtintegration.web.client.ui.impl.AbstractPresenter;
+import com.github.apetrelli.gwtintegration.mvp.client.ui.impl.AbstractPresenter;
 
 public abstract class BaseActivity extends AbstractPresenter {
 

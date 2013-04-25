@@ -7,9 +7,9 @@ import ${package}.module.client.mvp.AppActivityMapper;
 import ${package}.module.client.mvp.AppPlaceHistoryMapper;
 import ${package}.module.client.mvp.place.WelcomePlace;
 import ${package}.module.client.requestfactory.ApplicationRequestFactory;
-import com.github.apetrelli.gwtintegration.web.client.error.CustomUncaughtExceptionHandler;
-import com.github.apetrelli.gwtintegration.web.client.requestfactory.EventSourceRequestTransport;
-import com.github.apetrelli.gwtintegration.web.client.ui.HasBody;
+import com.github.apetrelli.gwtintegration.error.client.DialogBoxUncaughtExceptionHandler;
+import com.github.apetrelli.gwtintegration.mvp.client.ui.HasBody;
+import com.github.apetrelli.gwtintegration.requestfactory.client.EventSourceRequestTransport;
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.core.client.EntryPoint;
@@ -30,7 +30,7 @@ public class ${moduleName} implements EntryPoint {
 
 	@Override
 	public void onModuleLoad() {
-		GWT.setUncaughtExceptionHandler(new CustomUncaughtExceptionHandler());
+		GWT.setUncaughtExceptionHandler(new DialogBoxUncaughtExceptionHandler());
 
 		ClientFactory clientFactory = GWT.create(ClientFactory.class);
 		EventBus eventBus = clientFactory.getEventBus();

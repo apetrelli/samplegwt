@@ -4,18 +4,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.4.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.4.0/distro-source/core/src/gwt-module.dtd">
 <module rename-to="${parentArtifactId}">
-	<inherits name="com.google.gwt.activity.Activity"/>
-	<inherits name="com.google.gwt.place.Place"/>
 	<inherits name="com.google.gwt.user.User"/>
-	<inherits name="com.google.gwt.editor.Editor"/>
-	<inherits name="com.google.web.bindery.requestfactory.RequestFactory"/>
 	<inherits name="com.google.gwt.user.cellview.CellView"/>
 	<inherits name="com.google.gwt.logging.Logging"/>
 	<inherits name="com.google.gwt.text.Text"/>
 	<inherits name="com.google.gwt.user.User" />
 	<inherits name="com.google.gwt.i18n.I18N"/>
 	<inherits name="com.google.gwt.resources.Resources" />
-	<inherits name="com.github.apetrelli.gwtintegration.web.UtilGWT"/>
+	<inherits name="com.github.apetrelli.gwtintegration.error.GwtIntegrationError"/>
+	<inherits name="com.github.apetrelli.gwtintegration.editor.GwtIntegrationEditor"/>
+	<inherits name="com.github.apetrelli.gwtintegration.mvp.GwtIntegrationMvp"/>
+	<inherits name="com.github.apetrelli.gwtintegration.requestfactory.GwtIntegrationRequestFactory"/>
+	<inherits name="com.github.apetrelli.gwtintegration.util.GwtIntegrationUtil"/>
 	<inherits name="${package}.shared.${moduleName}Shared"/>
 	<inherits name="org.hibernate.validator.HibernateValidator" />
 	<set-property name="compiler.stackMode" value="emulated"/>

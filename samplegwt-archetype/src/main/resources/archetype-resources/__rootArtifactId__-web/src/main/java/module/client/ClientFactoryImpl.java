@@ -10,7 +10,7 @@ import ${package}.module.client.ui.WelcomeView;
 import ${package}.module.client.ui.impl.ListPersonsViewImpl;
 import ${package}.module.client.ui.impl.PersonDetailViewImpl;
 import ${package}.module.client.ui.impl.WelcomeViewImpl;
-import com.github.apetrelli.gwtintegration.web.client.ui.HasBody;
+import com.github.apetrelli.gwtintegration.mvp.client.ui.HasBody;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.event.shared.SimpleEventBus;

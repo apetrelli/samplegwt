@@ -52,6 +52,11 @@
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-hibernate-entitymanager</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
@@ -79,8 +84,29 @@
 			<version>1.0.0-SNAPSHOT</version>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.github.apetrelli.gwtintegration</groupId>
+			<artifactId>gwt-integration-widget</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.apetrelli.gwtintegration</groupId>
+			<artifactId>gwt-integration-mvp</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.apetrelli.gwtintegration</groupId>
+			<artifactId>gwt-integration-error</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.apetrelli.gwtintegration</groupId>
+			<artifactId>gwt-integration-util</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
+		<finalName>${parentArtifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

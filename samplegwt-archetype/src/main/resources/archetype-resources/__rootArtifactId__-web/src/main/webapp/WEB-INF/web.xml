@@ -31,10 +31,6 @@
 		<listener-class>com.github.apetrelli.gwtintegration.hibernate.entitymanager.web.HibernateInitContextListener</listener-class>
 	</listener>
 	<listener>
-		<display-name>servlet-context-holder</display-name>
-		<listener-class>com.github.apetrelli.gwtintegration.requestfactory.ServletContextHolderListener</listener-class>
-	</listener>
-	<listener>
 		<display-name>application-context-holder</display-name>
 		<listener-class>com.github.apetrelli.gwtintegration.spring.web.SpringWebApplicationContextHolderListener</listener-class>
 	</listener>
@@ -48,7 +44,7 @@
 	</listener>
 	<filter>
 		<filter-name>gwtCacheControl</filter-name>
-		<filter-class>com.github.apetrelli.gwtintegration.web.server.gwt.GWTCacheControlFilter</filter-class>
+		<filter-class>com.github.apetrelli.gwtintegration.web.servlet.GwtCacheControlFilter</filter-class>
 	</filter>
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>

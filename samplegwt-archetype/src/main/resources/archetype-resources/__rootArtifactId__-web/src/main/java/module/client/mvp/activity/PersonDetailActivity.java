@@ -11,7 +11,7 @@ import ${package}.module.client.requestfactory.proxy.PersonProxy;
 import ${package}.module.client.requestfactory.request.PersonRequest;
 import ${package}.module.client.ui.PersonDetailView;
 import ${package}.module.client.ui.editor.PersonEditor;
-import com.github.apetrelli.gwtintegration.web.client.editor.EditorWorkflow;
+import com.github.apetrelli.gwtintegration.editor.client.editor.EditorWorkflow;
 import com.google.gwt.core.shared.GWT;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.Window;
