@@ -14,7 +14,18 @@
 		<artifactId>apetrelli-master</artifactId>
 		<version>1-alpha3</version>
 	</parent>
-
+	<licenses>
+		<license>
+			<name>Apache License 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<scm>
+		<url>scm:git:https://github.com/apetrelli/samplegwt</url>
+		<connection>scm:git:git://github.com/apetrelli/samplegwt.git</connection>
+		<developerConnection>scm:git:https://github.com/apetrelli/samplegwt.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 	<build>
 		<extensions>
 			<extension>
