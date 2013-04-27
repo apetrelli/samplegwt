@@ -15,6 +15,7 @@
 	<inherits name="com.github.apetrelli.gwtintegration.editor.GwtIntegrationEditor"/>
 	<inherits name="com.github.apetrelli.gwtintegration.mvp.GwtIntegrationMvp"/>
 	<inherits name="com.github.apetrelli.gwtintegration.requestfactory.GwtIntegrationRequestFactory"/>
+	<inherits name="com.github.apetrelli.gwtintegration.spring.context.GwtIntegrationSpringContext"/>
 	<inherits name="com.github.apetrelli.gwtintegration.util.GwtIntegrationUtil"/>
 	<inherits name="${package}.shared.${moduleName}Shared"/>
 	<inherits name="org.hibernate.validator.HibernateValidator" />

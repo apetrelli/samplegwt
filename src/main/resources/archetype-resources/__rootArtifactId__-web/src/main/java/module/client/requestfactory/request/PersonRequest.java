@@ -6,7 +6,7 @@ package ${package}.module.client.requestfactory.request;
 import java.util.List;
 
 import com.github.apetrelli.gwtintegration.editor.client.requestfactory.CrudRequest;
-import com.github.apetrelli.gwtintegration.spring.context.requestfactory.GwtServiceLocator;
+import com.github.apetrelli.gwtintegration.spring.context.server.requestfactory.GwtServiceLocator;
 import ${package}.model.service.PersonService;
 import ${package}.module.client.requestfactory.proxy.PersonProxy;
 import com.google.web.bindery.requestfactory.shared.Request;
