@@ -3,6 +3,9 @@
 #set( $symbol_escape = '\' )
 package ${package}.model.domain;
 
+import java.math.BigDecimal;
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
@@ -10,9 +13,9 @@ import javax.persistence.Id;
 import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 
-import ${package}.shared.shared.enums.PersonalTitle;
 import com.github.apetrelli.gwtintegration.jpa.AbstractDeletable;
 import com.github.apetrelli.gwtintegration.jpa.DeleteEntityListener;
+import ${package}.shared.shared.enums.PersonalTitle;
 
 @Entity
 @EntityListeners({ DeleteEntityListener.class })
@@ -25,6 +28,7 @@ public class Person extends AbstractDeletable {
 	@Version
 	private Integer version;
 	
+	@NotNull
 	private PersonalTitle personalTitle;
 	
 	@NotNull
@@ -32,6 +36,10 @@ public class Person extends AbstractDeletable {
 	
 	@NotNull
 	private String lastName;
+	
+	private Date birthDate;
+	
+	private BigDecimal annualIncome;
 
 	public Long getId() {
 		return id;
@@ -64,6 +72,20 @@ public class Person extends AbstractDeletable {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
+	public Date getBirthDate() {
+		return birthDate;
+	}
 	
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
+	}
 	
+	public BigDecimal getAnnualIncome() {
+		return annualIncome;
+	}
+	
+	public void setAnnualIncome(BigDecimal annualIncome) {
+		this.annualIncome = annualIncome;
+	}
 }

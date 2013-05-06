@@ -10,9 +10,6 @@
 	<packaging>war</packaging>
 	<name>Sample GWT - Web project</name>
 	<description>The main web project</description>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>${groupId}</groupId>
@@ -27,7 +24,7 @@
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-user</artifactId>
-			<version>2.5.0</version>
+			<version>${gwt.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -110,15 +107,6 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-					<encoding>${project.build.sourceEncoding}</encoding>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
 				<version>2.9</version>
 				<!-- Note 2.8 does not work with AspectJ aspect path -->
@@ -143,7 +131,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
-				<version>2.5.0</version>
+				<version>${gwt.version}</version>
 				<configuration>
 					<logLevel>INFO</logLevel>
 					<style>OBF</style>
@@ -173,12 +161,12 @@
 					<dependency>
 						<groupId>com.google.gwt</groupId>
 						<artifactId>gwt-dev</artifactId>
-						<version>2.5.0</version>
+						<version>${gwt.version}</version>
 					</dependency>
 					<dependency>
 						<groupId>com.google.gwt</groupId>
 						<artifactId>gwt-user</artifactId>
-						<version>2.5.0</version>
+						<version>${gwt.version}</version>
 					</dependency>
 					<dependency>
 						<groupId>org.hibernate</groupId>
@@ -205,7 +193,7 @@
 					<dependency>
 						<groupId>com.google.web.bindery</groupId>
 						<artifactId>requestfactory-apt</artifactId>
-						<version>2.5.0</version>
+						<version>${gwt.version}</version>
 					</dependency>
 				</dependencies>
 			</plugin>

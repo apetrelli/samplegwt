@@ -4,13 +4,13 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui"
-	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:w="urn:import:com.github.apetrelli.gwtintegration.cellview.client.widget">
 	<ui:style>
 		
 	</ui:style>
 	<g:FlowPanel>
-		<c:CellTable ui:field="dataTable" />
-		<c:SimplePager ui:field="pager" location="CENTER"  />
+		<w:SimplePagedTable ui:field="dataTable" />
 		<g:Button text="Add" ui:field="add" />
 	</g:FlowPanel>
 </ui:UiBinder> 

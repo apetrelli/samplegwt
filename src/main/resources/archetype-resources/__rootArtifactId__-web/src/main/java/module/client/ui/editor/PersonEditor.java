@@ -4,10 +4,15 @@
 package ${package}.module.client.ui.editor;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
+import com.github.apetrelli.gwtintegration.editor.client.widget.LeafValueEditorDecorator;
+import com.github.apetrelli.gwtintegration.editor.client.widget.ValueDateBox;
+import com.github.apetrelli.gwtintegration.editor.client.widget.ValueListBox;
 import ${package}.module.client.requestfactory.proxy.PersonProxy;
 import ${package}.shared.shared.enums.PersonalTitle;
 import com.google.gwt.core.client.GWT;
@@ -17,16 +22,22 @@ import com.google.gwt.text.shared.Renderer;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.ValueListBox;
 import com.google.gwt.user.client.ui.Widget;
 
 public class PersonEditor extends Composite implements Editor<PersonProxy>{
 	
-	@UiField(provided=true) ValueListBox<PersonalTitle> personalTitle;
+	@UiField LeafValueEditorDecorator<ValueListBox<PersonalTitle>, PersonalTitle> personalTitle;
+	
+	@Ignore
+	@UiField(provided=true) ValueListBox<PersonalTitle> personalTitleListBox;
 	
 	@UiField ValueBoxEditorDecorator<String> firstName;
 	
 	@UiField ValueBoxEditorDecorator<String> lastName;
+	
+	@UiField LeafValueEditorDecorator<ValueDateBox, Date> birthDate;
+	
+	@UiField ValueBoxEditorDecorator<BigDecimal> annualIncome;
 	
 	private static PersonEditorUiBinder uiBinder = GWT
 			.create(PersonEditorUiBinder.class);
@@ -40,7 +51,7 @@ public class PersonEditor extends Composite implements Editor<PersonProxy>{
 	}
 
 	private void initPersonalTitle() {
-		personalTitle = new ValueListBox<PersonalTitle>(new Renderer<PersonalTitle>() {
+		personalTitleListBox = new ValueListBox<PersonalTitle>(new Renderer<PersonalTitle>() {
 
 			@Override
 			public String render(PersonalTitle object) {
@@ -56,7 +67,7 @@ public class PersonEditor extends Composite implements Editor<PersonProxy>{
 		List<PersonalTitle> titles = new ArrayList<PersonalTitle>();
 		titles.add(null);
 		titles.addAll(Arrays.asList(PersonalTitle.values()));
-		personalTitle.setAcceptableValues(titles);
+		personalTitleListBox.setAcceptableValues(titles);
 	}
 
 }

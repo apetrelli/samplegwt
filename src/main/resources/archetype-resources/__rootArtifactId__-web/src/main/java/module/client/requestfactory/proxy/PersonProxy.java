@@ -3,6 +3,11 @@
 #set( $symbol_escape = '\' )
 package ${package}.module.client.requestfactory.proxy;
 
+import java.math.BigDecimal;
+import java.util.Date;
+
+import javax.validation.constraints.NotNull;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 import ${package}.model.domain.Person;
@@ -18,6 +23,7 @@ public interface PersonProxy extends EntityProxy {
 	
 	Integer getVersion();
 	
+	@NotNull
 	PersonalTitle getPersonalTitle();
 	
 	void setPersonalTitle(PersonalTitle personalTitle);
@@ -31,4 +37,12 @@ public interface PersonProxy extends EntityProxy {
 	String getLastName();
 	
 	void setLastName(String lastName);
+	
+	Date getBirthDate();
+	
+	void setBirthDate(Date birthDate);
+	
+	BigDecimal getAnnualIncome();
+	
+	void setAnnualIncome(BigDecimal annualIncome);
 }

@@ -11,6 +11,8 @@
 	<inherits name="com.google.gwt.user.User" />
 	<inherits name="com.google.gwt.i18n.I18N"/>
 	<inherits name="com.google.gwt.resources.Resources" />
+	<inherits name="com.google.gwt.user.theme.standard.Standard" />
+	<inherits name="com.github.apetrelli.gwtintegration.cellview.GwtIntegrationCellview"/>
 	<inherits name="com.github.apetrelli.gwtintegration.error.GwtIntegrationError"/>
 	<inherits name="com.github.apetrelli.gwtintegration.editor.GwtIntegrationEditor"/>
 	<inherits name="com.github.apetrelli.gwtintegration.mvp.GwtIntegrationMvp"/>

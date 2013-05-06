@@ -4,13 +4,19 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui"
-	xmlns:e='urn:import:com.google.gwt.editor.ui.client'>
+	xmlns:e='urn:import:com.google.gwt.editor.ui.client'
+	xmlns:e1='urn:import:com.github.apetrelli.gwtintegration.editor.client.widget'>
 	<ui:style>
 		
 	</ui:style>
+	<ui:with field="util" type="${package}.module.client.util.ViewUtils" />
 	<g:FlowPanel>
 		<g:Label text="Personal title" />
-		<g:ValueListBox ui:field="personalTitle" />
+		<e1:LeafValueEditorDecorator ui:field="personalTitle">
+			<e1:valuebox>
+				<e1:ValueListBox ui:field="personalTitleListBox" />
+			</e1:valuebox>
+		</e1:LeafValueEditorDecorator>
 		<g:Label text="First name" />
 		<e:ValueBoxEditorDecorator ui:field="firstName">
 			<e:valuebox>
@@ -21,6 +27,18 @@
 		<e:ValueBoxEditorDecorator ui:field="lastName">
 			<e:valuebox>
 				<g:TextBox />
+			</e:valuebox>
+		</e:ValueBoxEditorDecorator>
+		<g:Label text="Birth Date" />
+		<e1:LeafValueEditorDecorator ui:field="birthDate">
+			<e1:valuebox>
+				<e1:ValueDateBox format="{util.getDateFormatForDateBox}" />
+			</e1:valuebox>
+		</e1:LeafValueEditorDecorator>
+		<g:Label text="Annual income" />
+		<e:ValueBoxEditorDecorator ui:field="annualIncome">
+			<e:valuebox>
+				<e1:ValueBox renderer="{util.getMoneyRenderer}" parser="{util.getMoneyParser}" />
 			</e:valuebox>
 		</e:ValueBoxEditorDecorator>
 	</g:FlowPanel>
