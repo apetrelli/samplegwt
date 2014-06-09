@@ -4,6 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <requiredProperties>
   	<requiredProperty key="moduleName" />
+  	<requiredProperty key="gwtVersion" />
   </requiredProperties>
   <modules>
     <module id="${rootArtifactId}-shared" dir="__rootArtifactId__-shared" name="${rootArtifactId}-shared">
@@ -44,6 +45,13 @@
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
           <directory>src/main/webapp</directory>
+          <includes>
+            <include>**/*.xml</include>
+            <include>**/*.html</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/extra-webapp</directory>
           <includes>
             <include>**/*.xml</include>
             <include>**/*.html</include>

@@ -33,6 +33,10 @@
 	<set-property name="gwt.logging.systemHandler" value="ENABLED"/>
 	<set-property name="gwt.logging.simpleRemoteHandler" value="ENABLED"/>
 
+	<!-- Configuration for Super Dev Mode -->
+	<add-linker name="xsiframe"/>
+	<set-configuration-property name="devModeRedirectEnabled" value="true"/>
+
 	<!--UiBinder Configuration -->
 	<set-configuration-property name="UiBinder.useSafeHtmlTemplates" value="true"/>
 
