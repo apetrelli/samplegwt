@@ -10,32 +10,33 @@
 		
 	</ui:style>
 	<ui:with field="util" type="${package}.module.client.util.ViewUtils" />
+	<ui:with type="${package}.module.client.i18n.MainMessages" field="messages" />
 	<g:FlowPanel>
-		<g:Label text="Personal title" />
+		<g:Label text="{messages.personalTitle}" />
 		<e1:LeafValueEditorDecorator ui:field="personalTitle">
 			<e1:valuebox>
 				<e1:ValueListBox ui:field="personalTitleListBox" />
 			</e1:valuebox>
 		</e1:LeafValueEditorDecorator>
-		<g:Label text="First name" />
+		<g:Label text="{messages.firstName}" />
 		<e:ValueBoxEditorDecorator ui:field="firstName">
 			<e:valuebox>
 				<g:TextBox />
 			</e:valuebox>
 		</e:ValueBoxEditorDecorator>
-		<g:Label text="Last name" />
+		<g:Label text="{messages.lastName}" />
 		<e:ValueBoxEditorDecorator ui:field="lastName">
 			<e:valuebox>
 				<g:TextBox />
 			</e:valuebox>
 		</e:ValueBoxEditorDecorator>
-		<g:Label text="Birth Date" />
+		<g:Label text="{messages.birthDate}" />
 		<e1:LeafValueEditorDecorator ui:field="birthDate">
 			<e1:valuebox>
 				<e1:ValueDateBox format="{util.getDateFormatForDateBox}" />
 			</e1:valuebox>
 		</e1:LeafValueEditorDecorator>
-		<g:Label text="Annual income" />
+		<g:Label text="{messages.annualIncome}" />
 		<e:ValueBoxEditorDecorator ui:field="annualIncome">
 			<e:valuebox>
 				<e1:ValueBox renderer="{util.getMoneyRenderer}" parser="{util.getMoneyParser}" />

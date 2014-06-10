@@ -40,7 +40,7 @@
 	</listener>
 	<listener>
 		<display-name>slf4j-bridge-install</display-name>
-		<listener-class>com.github.apetrelli.gwtintegration.remotelogging.Slf4jBridgeInstallListener</listener-class>
+		<listener-class>com.github.apetrelli.gwtintegration.remotelogging.server.Slf4jBridgeInstallListener</listener-class>
 	</listener>
 	<filter>
 		<filter-name>gwtCacheControl</filter-name>
@@ -116,7 +116,7 @@
 	</servlet>
 	<servlet>
 	    <servlet-name>remoteLogging</servlet-name>
-	    <servlet-class>com.github.apetrelli.gwtintegration.remotelogging.RemoteLoggingServiceImpl</servlet-class>
+	    <servlet-class>com.github.apetrelli.gwtintegration.remotelogging.server.RemoteLoggingServiceImpl</servlet-class>
 	    <init-param>
 	    	<param-name>SYMBOL_MAPS_DIR</param-name>
 	    	<param-value>/WEB-INF/deploy/${parentArtifactId}/symbolMaps</param-value>

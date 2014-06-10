@@ -12,15 +12,16 @@
 			height: 100%
 		}
 	</ui:style>
+	<ui:with type="${package}.module.client.i18n.MainMessages" field="messages" />
 	<g:DockLayoutPanel>
 		<g:north size="100.0">
 			<g:FlowPanel>
-				<g:Label text="Sample application"/>
+				<g:Label text="{messages.title}"/>
 			</g:FlowPanel>
 		</g:north>
 		<g:west size="100.0">
 			<g:FlowPanel>
-				<g:Hyperlink text="Persons" targetHistoryToken="ListPersonsPlace:" />
+				<g:Hyperlink text="{messages.persons}" targetHistoryToken="ListPersonsPlace:" />
 			</g:FlowPanel>
 		</g:west>
 		<g:center>
@@ -28,7 +29,7 @@
 		</g:center>
 		<g:south size="100.0">
 			<g:FlowPanel>
-				<g:Label text="Footer"/>
+				<g:Label text="{messages.footer}"/>
 			</g:FlowPanel>
 		</g:south>
 	</g:DockLayoutPanel>

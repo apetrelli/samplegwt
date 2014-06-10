@@ -3,12 +3,15 @@
 #set( $symbol_escape = '\' )
 package ${package}.module.client;
 
+import java.util.logging.Logger;
+
 import ${package}.module.client.mvp.AppActivityMapper;
 import ${package}.module.client.mvp.AppPlaceHistoryMapper;
 import ${package}.module.client.mvp.place.WelcomePlace;
 import ${package}.module.client.requestfactory.ApplicationRequestFactory;
 import com.github.apetrelli.gwtintegration.error.client.DialogBoxUncaughtExceptionHandler;
 import com.github.apetrelli.gwtintegration.mvp.client.ui.HasBody;
+import com.github.apetrelli.gwtintegration.remotelogging.client.SimpleRemoteLogHandler;
 import com.github.apetrelli.gwtintegration.requestfactory.client.EventSourceRequestTransport;
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.activity.shared.ActivityMapper;
@@ -32,13 +35,15 @@ public class ${moduleName} implements EntryPoint {
 	public void onModuleLoad() {
 		GWT.setUncaughtExceptionHandler(new DialogBoxUncaughtExceptionHandler());
 
+		ApplicationRequestFactory requestFactory = GWT
+				.create(ApplicationRequestFactory.class);
+		Logger.getLogger("").addHandler(new SimpleRemoteLogHandler());
+
 		ClientFactory clientFactory = GWT.create(ClientFactory.class);
 		EventBus eventBus = clientFactory.getEventBus();
 		PlaceController placeController = clientFactory.getPlaceController();
 
 		// Start ActivityManager for the main widget with our ActivityMapper
-		ApplicationRequestFactory requestFactory = GWT
-				.create(ApplicationRequestFactory.class);
 		requestFactory.initialize(eventBus, new EventSourceRequestTransport(
 				eventBus));
 		ActivityMapper activityMapper = new AppActivityMapper(clientFactory,

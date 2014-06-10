@@ -9,8 +9,9 @@
 	<ui:style>
 		
 	</ui:style>
+	<ui:with type="${package}.module.client.i18n.MainMessages" field="messages" />
 	<g:FlowPanel>
 		<w:SimplePagedTable ui:field="dataTable" />
-		<g:Button text="Add" ui:field="add" />
+		<g:Button text="{messages.add}" ui:field="add" />
 	</g:FlowPanel>
 </ui:UiBinder> 

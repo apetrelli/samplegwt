@@ -13,7 +13,8 @@
 			float: left;
 		}
 	</ui:style>
+	<ui:with type="${package}.module.client.i18n.MainMessages" field="messages" />
 	<g:FlowPanel>
-		<g:Label>Hello there.</g:Label>
+		<g:Label text="{messages.welcomeText}" />
 	</g:FlowPanel>
 </ui:UiBinder> 

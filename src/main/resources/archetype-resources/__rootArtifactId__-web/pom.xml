@@ -84,7 +84,6 @@
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-remote-logging</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
-			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
@@ -151,6 +150,7 @@
 						<module>${package}.module.${moduleName}</module>
 					</modules>
 					<copyWebapp>true</copyWebapp>
+					<codeServerWorkDir>${project.build.directory}</codeServerWorkDir>
 					<!-- Triggering threaded compilation to save memory.
 					The number of threads are set to 10, however the ThreadedPermutationWorkerFactory uses a maximum
 					of threads calculated as the minimum between the number of <localWorkers> and this value (10).

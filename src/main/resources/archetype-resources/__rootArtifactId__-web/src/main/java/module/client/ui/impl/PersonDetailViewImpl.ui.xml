@@ -8,9 +8,10 @@
 	<ui:style>
 		
 	</ui:style>
+	<ui:with type="${package}.module.client.i18n.MainMessages" field="messages" />
 	<g:FlowPanel>
 		<e:PersonEditor ui:field="editor" />
-		<g:Button ui:field="save" text="Save" />
-		<g:Button ui:field="delete" text="Delete" />
+		<g:Button ui:field="save" text="{messages.save}" />
+		<g:Button ui:field="delete" text="{messages.delete}" />
 	</g:FlowPanel>
 </ui:UiBinder> 
