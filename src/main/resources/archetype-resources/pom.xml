@@ -10,6 +10,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<gwt.version>${gwtVersion}</gwt.version>
+		<gwt.integration.version>${gwtIntegrationVersion}</gwt.integration.version>
 	</properties>
 	<build>
 		<plugins>

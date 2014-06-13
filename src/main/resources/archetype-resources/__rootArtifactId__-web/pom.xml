@@ -19,7 +19,7 @@
 		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-web</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>${gwt.integration.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.gwt</groupId>
@@ -51,7 +51,7 @@
 		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-hibernate-validator</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>${gwt.integration.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -61,49 +61,49 @@
 		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-hibernate-entitymanager</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>${gwt.integration.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-hibernate-core</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>${gwt.integration.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-spring-security</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>${gwt.integration.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-spring-web</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>${gwt.integration.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-remote-logging</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>${gwt.integration.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-widget</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>${gwt.integration.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-mvp</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>${gwt.integration.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-error</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>${gwt.integration.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.apetrelli.gwtintegration</groupId>
 			<artifactId>gwt-integration-util</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>${gwt.integration.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.codeartisans</groupId>

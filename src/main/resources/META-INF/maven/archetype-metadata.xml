@@ -4,7 +4,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <requiredProperties>
   	<requiredProperty key="moduleName" />
-  	<requiredProperty key="gwtVersion" />
+  	<requiredProperty key="gwtVersion">
+  		<defaultValue>2.6.1</defaultValue>
+  	</requiredProperty>
+  	<requiredProperty key="gwtIntegrationVersion">
+  		<defaultValue>1.0.0-alpha3</defaultValue>
+  	</requiredProperty>
   </requiredProperties>
   <modules>
     <module id="${rootArtifactId}-shared" dir="__rootArtifactId__-shared" name="${rootArtifactId}-shared">
