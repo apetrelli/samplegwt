@@ -8,7 +8,7 @@
   		<defaultValue>2.6.1</defaultValue>
   	</requiredProperty>
   	<requiredProperty key="gwtIntegrationVersion">
-  		<defaultValue>1.0.0-alpha3</defaultValue>
+  		<defaultValue>1.0.0-alpha4</defaultValue>
   	</requiredProperty>
   </requiredProperties>
   <modules>
