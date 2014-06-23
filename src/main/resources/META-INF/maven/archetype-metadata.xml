@@ -50,17 +50,54 @@
           </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/production-resources</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
           <directory>src/main/webapp</directory>
           <includes>
+            <include>**/*.jsp</include>
             <include>**/*.xml</include>
             <include>**/*.html</include>
           </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/main/extra-webapp</directory>
+          <directory>src/main/resources</directory>
           <includes>
             <include>**/*.xml</include>
-            <include>**/*.html</include>
+            <include>**/*.properties</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/production-sources</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/development-resources</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/extra-webapp</directory>
+          <includes>
+            <include>**/*.jsp</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/development-sources</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/extra-webapp</directory>
+          <includes>
+            <include>**/*.jspx</include>
           </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">

@@ -112,7 +112,12 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>siprog</finalName>
+		<finalName>${rootArtifactId}</finalName>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -150,7 +155,6 @@
 						<module>${package}.module.${moduleName}</module>
 					</modules>
 					<copyWebapp>true</copyWebapp>
-					<codeServerWorkDir>${project.build.directory}</codeServerWorkDir>
 					<!-- Triggering threaded compilation to save memory.
 					The number of threads are set to 10, however the ThreadedPermutationWorkerFactory uses a maximum
 					of threads calculated as the minimum between the number of <localWorkers> and this value (10).
@@ -207,32 +211,10 @@
 					</dependency>
 				</dependencies>
 			</plugin>
-
-			<!-- Google Plugin for Eclipse (GPE) won't see the source generated above 
-				by requestfactory-apt unless it is exposed as an additional source dir -->
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>1.7</version>
-				<executions>
-					<execution>
-						<id>add-source</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>add-source</goal>
-						</goals>
-						<configuration>
-							<sources>
-								<source>${project.build.directory}/generated-sources/apt</source>
-							</sources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
+				<!--This plugin's configuration is used to store Eclipse m2e settings
 					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
@@ -263,10 +245,125 @@
 	</build>
 	<profiles>
 		<profile>
+      <id>production</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <build>
+        <resources>
+          <resource>
+            <directory>src/main/production-resources</directory>
+          </resource>
+        </resources>
+        <!-- Google Plugin for Eclipse (GPE) won't see the source generated above
+          by requestfactory-apt unless it is exposed as an additional source dir -->
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+            <version>1.7</version>
+            <executions>
+              <execution>
+                <id>add-source</id>
+                <phase>generate-sources</phase>
+                <goals>
+                  <goal>add-source</goal>
+                </goals>
+                <configuration>
+                  <sources>
+                    <source>${project.build.directory}/generated-sources/apt</source>
+                    <source>src/main/production-sources</source>
+                  </sources>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
 			<id>development</id>
 			<build>
+        <resources>
+          <resource>
+            <directory>src/main/development-resources</directory>
+          </resource>
+        </resources>
 				<plugins>
 					<plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+            <version>1.7</version>
+            <executions>
+              <execution>
+                <id>add-source</id>
+                <phase>generate-sources</phase>
+                <goals>
+                  <goal>add-source</goal>
+                </goals>
+                <configuration>
+                  <sources>
+                    <source>${project.build.directory}/generated-sources/apt</source>
+                    <source>src/main/development-sources</source>
+                  </sources>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+	      <plugin>
+	        <groupId>org.codehaus.mojo</groupId>
+	        <artifactId>gwt-maven-plugin</artifactId>
+	        <version>${gwt.version}</version>
+	        <configuration>
+	          <logLevel>INFO</logLevel>
+	          <style>PRETTY</style>
+	          <draftCompile>true</draftCompile>
+	          <saveSource>true</saveSource>
+              <extra>${project.build.directory}/gwt-extra</extra>
+	          <runTarget>/index.html</runTarget>
+	          <hostedWebapp>${project.build.directory}/${project.build.finalName}</hostedWebapp>
+	          <modules>
+	            <module>${package}.module.${moduleName}</module>
+	          </modules>
+	          <copyWebapp>true</copyWebapp>
+	          <webappDirectory>${project.build.directory}/gwt-development</webappDirectory>
+	          <!-- Triggering threaded compilation to save memory. The number of threads
+	            are set to 10, however the ThreadedPermutationWorkerFactory uses a maximum
+	            of threads calculated as the minimum between the number of <localWorkers>
+	            and this value (10). If the <localWorkers> is not specified, the Maven plugin
+	            calculates the values as the number of processor threads, so usually they
+	            are lower than 10. -->
+	          <extraJvmArgs>-Dgwt.jjs.permutationWorkerFactory=com.google.gwt.dev.ThreadedPermutationWorkerFactory -Dgwt.jjs.maxThreads=10</extraJvmArgs>
+	        </configuration>
+	        <executions>
+	          <execution>
+	            <id>gwtcompile</id>
+	            <phase>prepare-package</phase>
+	            <goals>
+	              <goal>compile</goal>
+	            </goals>
+	          </execution>
+	        </executions>
+	        <dependencies>
+	          <dependency>
+	            <groupId>com.google.gwt</groupId>
+	            <artifactId>gwt-dev</artifactId>
+	            <version>${gwt.version}</version>
+	          </dependency>
+	          <dependency>
+	            <groupId>com.google.gwt</groupId>
+	            <artifactId>gwt-user</artifactId>
+	            <version>${gwt.version}</version>
+	          </dependency>
+	          <dependency>
+	            <groupId>org.hibernate</groupId>
+	            <artifactId>hibernate-validator</artifactId>
+	            <version>4.1.0.Final</version>
+	            <classifier>sources</classifier>
+	          </dependency>
+	        </dependencies>
+	      </plugin>
+          <plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-war-plugin</artifactId>
 						<version>2.4</version>
@@ -275,6 +372,19 @@
 								<resource>
 									<directory>src/main/extra-webapp</directory>
 								</resource>
+                <resource>
+                  <directory>${project.build.directory}/gwt-development</directory>
+                </resource>
+                <resource>
+                  <directory>${project.build.directory}/gwt-extra</directory>
+                  <excludes>
+                  	<exclude>${project.build.finalName}/src/**</exclude>
+                  </excludes>
+                </resource>
+                <resource>
+                  <directory>${project.build.directory}/gwt-extra/${project.build.finalName}/src</directory>
+                  <targetPath>${project.build.finalName}/symbolMaps</targetPath>
+                </resource>
 							</webResources>
 						</configuration>
 					</plugin>

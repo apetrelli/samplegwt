@@ -1,0 +1,39 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+  xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                    http://www.springframework.org/schema/security
+                    http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+  <http auto-config="true" use-expressions="true">
+    <form-login login-processing-url="/resources/j_spring_security_check"
+      login-page="/login.jspx" authentication-failure-url="/login.jspx?login_error=t"
+      default-target-url="/" />
+    <logout logout-url="/j_spring_security_logout" />
+
+    <!-- Configure these elements to secure URIs in your application -->
+    <intercept-url pattern="/login.jspx" access="permitAll" />
+    <intercept-url pattern="/favicon.ico" access="permitAll" />
+    <intercept-url pattern="/j_spring_security_logout"
+      access="permitAll" />
+    <intercept-url pattern="/gwtRequest" access="permitAll" />
+    <intercept-url pattern="/**" access="isAuthenticated()" />
+
+  </http>
+  <global-method-security pre-post-annotations="enabled"
+    mode="aspectj" />
+
+  <authentication-manager>
+    <authentication-provider ref="authenticationProvider" />
+  </authentication-manager>
+  <beans:bean name="authenticationProvider"
+    class="${package}.module.server.security.PassAllAuthenticationProvider">
+    <beans:property name="userDetailsService" ref="userDetailsService" />
+  </beans:bean>
+  <beans:bean id="userDetailsService"
+    class="${package}.module.server.security.SampleUserDetailsService" />
+</beans:beans>

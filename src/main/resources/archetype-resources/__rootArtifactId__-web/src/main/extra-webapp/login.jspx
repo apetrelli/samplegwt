@@ -1,0 +1,31 @@
+<html>
+<head></head>
+<body>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+  <jsp:directive.page contentType="text/html;charset=UTF-8" />
+  <jsp:output omit-xml-declaration="yes" />
+    <p>
+      Security login
+    </p>
+    <form name="f" action="resources/j_spring_security_check" method="POST">
+      <div>
+        <label for="j_username">
+          Username
+        </label>
+        <input id="j_username" type='text' name='j_username' style="width:150px" />
+      </div>
+      <br />
+      <div>
+        <label for="j_password">
+          Password
+        </label>
+        <input id="j_password" type='password' name='j_password' style="width:150px" />
+      </div>
+      <br />
+      <div class="submit">
+        <input id="proceed" type="submit" value="Login" />
+        <input id="reset" type="reset" value="Reset" />
+      </div>
+    </form>
+</div>
+</body></html>
