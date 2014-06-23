@@ -4,7 +4,7 @@
 
 	<groupId>com.github.apetrelli.samplegwt</groupId>
 	<artifactId>samplegwt-archetype</artifactId>
-	<version>1.0.0-alpha4</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>SampleGWT archetype</name>
@@ -23,7 +23,7 @@
 		<url>scm:git:https://github.com/apetrelli/samplegwt</url>
 		<connection>scm:git:git://github.com/apetrelli/samplegwt.git</connection>
 		<developerConnection>scm:git:https://github.com/apetrelli/samplegwt.git</developerConnection>
-		<tag>samplegwt-archetype-1.0.0-alpha4</tag>
+		<tag>HEAD</tag>
 	</scm>
 	<build>
 		<extensions>
