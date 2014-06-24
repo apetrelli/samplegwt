@@ -32,7 +32,8 @@ public class PersonDetailActivity extends BaseActivity implements PersonDetailVi
 		super(requestFactory, clientFactory);
 		id = place.getId();
 		driver = GWT.create(Driver.class);
-		workflow = new EditorWorkflow<PersonProxy, PersonRequest, PersonEditor, Long>(requestFactory, driver, clientFactory.getPersonDetailView().getEditor()) {
+		PersonDetailView view = clientFactory.getPersonDetailView();
+		workflow = new EditorWorkflow<PersonProxy, PersonRequest, PersonEditor, Long>(requestFactory, driver, view.getEditor(), view.getGenericDisplayer()) {
 
 			@Override
 			protected PersonRequest getNewRequestContext() {

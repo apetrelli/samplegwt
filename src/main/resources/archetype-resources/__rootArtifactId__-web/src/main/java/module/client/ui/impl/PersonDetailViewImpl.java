@@ -5,6 +5,8 @@ package ${package}.module.client.ui.impl;
 
 import ${package}.module.client.ui.PersonDetailView;
 import ${package}.module.client.ui.editor.PersonEditor;
+
+import com.github.apetrelli.gwtintegration.editor.client.editor.ConstraintViolationDisplayer;
 import com.github.apetrelli.gwtintegration.mvp.client.ui.impl.AbstractMvpView;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -18,6 +20,8 @@ public class PersonDetailViewImpl extends AbstractMvpView<PersonDetailView.Prese
 
 	@UiField PersonEditor editor;
 	
+	@UiField ConstraintViolationDisplayer genericDisplayer;
+
 	@UiField Button save;
 	
 	@UiField Button delete;
@@ -38,6 +42,11 @@ public class PersonDetailViewImpl extends AbstractMvpView<PersonDetailView.Prese
 		return editor;
 	}
 	
+	@Override
+	public ConstraintViolationDisplayer getGenericDisplayer() {
+		return genericDisplayer;
+	}
+
 	@Override
 	public void canDelete(boolean canDelete) {
 		delete.setVisible(canDelete);
