@@ -15,6 +15,6 @@ import ${package}.model.domain.Person;
 @Repository
 public interface PersonRepository extends JpaRepository<Person, Long>, JpaSpecificationExecutor<Person> {
 
-	@QueryHints(value = { @QueryHint(name = "org.hibernate.readOnly", value = "true")})
-	Person findById(Long id);
+    @QueryHints(value = { @QueryHint(name = "org.hibernate.readOnly", value = "true")})
+    Person findById(Long id);
 }

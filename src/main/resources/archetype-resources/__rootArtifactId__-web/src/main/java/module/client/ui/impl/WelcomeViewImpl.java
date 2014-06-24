@@ -15,26 +15,26 @@ import com.google.gwt.user.client.ui.Widget;
  *
  */
 public class WelcomeViewImpl extends Composite implements WelcomeView {
-	
-	private static WelcomeViewImplUiBinder uiBinder = GWT
-			.create(WelcomeViewImplUiBinder.class);
 
-	/**
-	 * Bridge to view and UiBinder xml.
-	 *
-	 */
-	interface WelcomeViewImplUiBinder extends UiBinder<Widget, WelcomeViewImpl> {
-	}
+    private static WelcomeViewImplUiBinder uiBinder = GWT
+            .create(WelcomeViewImplUiBinder.class);
 
-	/**
-	 * Constructor.
-	 */
-	public WelcomeViewImpl() {
-		initWidget(uiBinder.createAndBindUi(this));
-	}
-	
-	@Override
-	public void setPresenter(Presenter presenter) {
-		// Does nothing for the moment.
-	}
+    /**
+     * Bridge to view and UiBinder xml.
+     *
+     */
+    interface WelcomeViewImplUiBinder extends UiBinder<Widget, WelcomeViewImpl> {
+    }
+
+    /**
+     * Constructor.
+     */
+    public WelcomeViewImpl() {
+        initWidget(uiBinder.createAndBindUi(this));
+    }
+
+    @Override
+    public void setPresenter(Presenter presenter) {
+        // Does nothing for the moment.
+    }
 }

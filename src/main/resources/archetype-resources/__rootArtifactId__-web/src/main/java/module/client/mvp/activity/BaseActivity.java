@@ -9,14 +9,14 @@ import com.github.apetrelli.gwtintegration.mvp.client.ui.impl.AbstractPresenter;
 
 public abstract class BaseActivity extends AbstractPresenter {
 
-	protected ApplicationRequestFactory requestFactory;
-	protected ClientFactory clientFactory;
+    protected ApplicationRequestFactory requestFactory;
+    protected ClientFactory clientFactory;
 
-	public BaseActivity(ApplicationRequestFactory requestFactory,
-			ClientFactory clientFactory) {
-		super(clientFactory.getPlaceController());
-		this.requestFactory = requestFactory;
-		this.clientFactory = clientFactory;
-	}
+    public BaseActivity(ApplicationRequestFactory requestFactory,
+            ClientFactory clientFactory) {
+        super(clientFactory.getPlaceController());
+        this.requestFactory = requestFactory;
+        this.clientFactory = clientFactory;
+    }
 
 }

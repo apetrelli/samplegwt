@@ -13,36 +13,36 @@ import com.github.apetrelli.gwtintegration.hibernate.core.locator.DeproxierDelet
 @Component
 public class PersonLocator extends DeproxierDeletableLocator<Person, Long> {
 
-	@Autowired
-	private PersonService service;
-	
-	@Override
-	public Person create(Class<? extends Person> clazz) {
-		return new Person();
-	}
+    @Autowired
+    private PersonService service;
 
-	@Override
-	public Person find(Long id) {
-		return service.findOne(id);
-	}
+    @Override
+    public Person create(Class<? extends Person> clazz) {
+        return new Person();
+    }
 
-	@Override
-	public Class<Person> getDomainType() {
-		return Person.class;
-	}
+    @Override
+    public Person find(Long id) {
+        return service.findOne(id);
+    }
 
-	@Override
-	public Long getId(Person domainObject) {
-		return domainObject.getId();
-	}
+    @Override
+    public Class<Person> getDomainType() {
+        return Person.class;
+    }
 
-	@Override
-	public Class<Long> getIdType() {
-		return Long.class;
-	}
+    @Override
+    public Long getId(Person domainObject) {
+        return domainObject.getId();
+    }
 
-	@Override
-	public Object getVersion(Person domainObject) {
-		return domainObject.getVersion();
-	}
+    @Override
+    public Class<Long> getIdType() {
+        return Long.class;
+    }
+
+    @Override
+    public Object getVersion(Person domainObject) {
+        return domainObject.getVersion();
+    }
 }

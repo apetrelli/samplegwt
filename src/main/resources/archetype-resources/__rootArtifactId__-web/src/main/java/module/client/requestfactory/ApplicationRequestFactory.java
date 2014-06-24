@@ -13,11 +13,11 @@ import com.google.web.bindery.requestfactory.shared.RequestFactory;
  * The main request factory.
  */
 public interface ApplicationRequestFactory extends RequestFactory {
-	
-	/**
-	 * @return a GWT logging request.
-	 */
-	LoggingRequest loggingRequest();
-	
-	PersonRequest personRequest();
+
+    /**
+     * @return a GWT logging request.
+     */
+    LoggingRequest loggingRequest();
+
+    PersonRequest personRequest();
 }

@@ -18,47 +18,47 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class PersonDetailViewImpl extends AbstractMvpView<PersonDetailView.Presenter> implements PersonDetailView {
 
-	@UiField PersonEditor editor;
-	
-	@UiField ConstraintViolationDisplayer genericDisplayer;
+    @UiField PersonEditor editor;
 
-	@UiField Button save;
-	
-	@UiField Button delete;
-	
-	private static PersonDetailViewImplUiBinder uiBinder = GWT
-			.create(PersonDetailViewImplUiBinder.class);
+    @UiField ConstraintViolationDisplayer genericDisplayer;
 
-	interface PersonDetailViewImplUiBinder extends
-			UiBinder<Widget, PersonDetailViewImpl> {
-	}
+    @UiField Button save;
 
-	public PersonDetailViewImpl() {
-		initWidget(uiBinder.createAndBindUi(this));
-	}
+    @UiField Button delete;
 
-	@Override
-	public PersonEditor getEditor() {
-		return editor;
-	}
-	
-	@Override
-	public ConstraintViolationDisplayer getGenericDisplayer() {
-		return genericDisplayer;
-	}
+    private static PersonDetailViewImplUiBinder uiBinder = GWT
+            .create(PersonDetailViewImplUiBinder.class);
 
-	@Override
-	public void canDelete(boolean canDelete) {
-		delete.setVisible(canDelete);
-	}
+    interface PersonDetailViewImplUiBinder extends
+            UiBinder<Widget, PersonDetailViewImpl> {
+    }
 
-	@UiHandler("save")
-	void onSaveClick(ClickEvent event) {
-		presenter.save();
-	}
+    public PersonDetailViewImpl() {
+        initWidget(uiBinder.createAndBindUi(this));
+    }
 
-	@UiHandler("delete")
-	void onDeleteClick(ClickEvent event) {
-		presenter.delete();
-	}
+    @Override
+    public PersonEditor getEditor() {
+        return editor;
+    }
+
+    @Override
+    public ConstraintViolationDisplayer getGenericDisplayer() {
+        return genericDisplayer;
+    }
+
+    @Override
+    public void canDelete(boolean canDelete) {
+        delete.setVisible(canDelete);
+    }
+
+    @UiHandler("save")
+    void onSaveClick(ClickEvent event) {
+        presenter.save();
+    }
+
+    @UiHandler("delete")
+    void onDeleteClick(ClickEvent event) {
+        presenter.delete();
+    }
 }

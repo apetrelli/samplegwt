@@ -25,49 +25,49 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
 public class PersonEditor extends Composite implements Editor<PersonProxy>{
-	
-	@UiField LeafValueEditorDecorator<ValueListBox<PersonalTitle>, PersonalTitle> personalTitle;
-	
-	@Ignore
-	@UiField(provided=true) ValueListBox<PersonalTitle> personalTitleListBox;
-	
-	@UiField ValueBoxEditorDecorator<String> firstName;
-	
-	@UiField ValueBoxEditorDecorator<String> lastName;
-	
-	@UiField LeafValueEditorDecorator<ValueDateBox, Date> birthDate;
-	
-	@UiField ValueBoxEditorDecorator<BigDecimal> annualIncome;
-	
-	private static PersonEditorUiBinder uiBinder = GWT
-			.create(PersonEditorUiBinder.class);
 
-	interface PersonEditorUiBinder extends UiBinder<Widget, PersonEditor> {
-	}
+    @UiField LeafValueEditorDecorator<ValueListBox<PersonalTitle>, PersonalTitle> personalTitle;
 
-	public PersonEditor() {
-		initPersonalTitle();
-		initWidget(uiBinder.createAndBindUi(this));
-	}
+    @Ignore
+    @UiField(provided=true) ValueListBox<PersonalTitle> personalTitleListBox;
 
-	private void initPersonalTitle() {
-		personalTitleListBox = new ValueListBox<PersonalTitle>(new Renderer<PersonalTitle>() {
+    @UiField ValueBoxEditorDecorator<String> firstName;
 
-			@Override
-			public String render(PersonalTitle object) {
-				return object != null ? object.toString() : "";
-			}
+    @UiField ValueBoxEditorDecorator<String> lastName;
 
-			@Override
-			public void render(PersonalTitle object, Appendable appendable)
-					throws IOException {
-				appendable.append(render(object));
-			}
-		});
-		List<PersonalTitle> titles = new ArrayList<PersonalTitle>();
-		titles.add(null);
-		titles.addAll(Arrays.asList(PersonalTitle.values()));
-		personalTitleListBox.setAcceptableValues(titles);
-	}
+    @UiField LeafValueEditorDecorator<ValueDateBox, Date> birthDate;
+
+    @UiField ValueBoxEditorDecorator<BigDecimal> annualIncome;
+
+    private static PersonEditorUiBinder uiBinder = GWT
+            .create(PersonEditorUiBinder.class);
+
+    interface PersonEditorUiBinder extends UiBinder<Widget, PersonEditor> {
+    }
+
+    public PersonEditor() {
+        initPersonalTitle();
+        initWidget(uiBinder.createAndBindUi(this));
+    }
+
+    private void initPersonalTitle() {
+        personalTitleListBox = new ValueListBox<PersonalTitle>(new Renderer<PersonalTitle>() {
+
+            @Override
+            public String render(PersonalTitle object) {
+                return object != null ? object.toString() : "";
+            }
+
+            @Override
+            public void render(PersonalTitle object, Appendable appendable)
+                    throws IOException {
+                appendable.append(render(object));
+            }
+        });
+        List<PersonalTitle> titles = new ArrayList<PersonalTitle>();
+        titles.add(null);
+        titles.addAll(Arrays.asList(PersonalTitle.values()));
+        personalTitleListBox.setAcceptableValues(titles);
+    }
 
 }

@@ -10,22 +10,22 @@ import com.google.gwt.place.shared.PlaceTokenizer;
  * Place for Welcome.
  */
 public class ListPersonsPlace extends Place {
-	
-	/**
-	 * Implementation of Tokenizer for this class.
-	 */
-	public static class Tokenizer implements PlaceTokenizer<ListPersonsPlace> {
 
-		@Override
-		public ListPersonsPlace getPlace(String token) {
-			return new ListPersonsPlace();
-		}
+    /**
+     * Implementation of Tokenizer for this class.
+     */
+    public static class Tokenizer implements PlaceTokenizer<ListPersonsPlace> {
 
-		@Override
-		public String getToken(ListPersonsPlace place) {
-			return "";
-		}
-		
-	}
+        @Override
+        public ListPersonsPlace getPlace(String token) {
+            return new ListPersonsPlace();
+        }
+
+        @Override
+        public String getToken(ListPersonsPlace place) {
+            return "";
+        }
+
+    }
 
 }

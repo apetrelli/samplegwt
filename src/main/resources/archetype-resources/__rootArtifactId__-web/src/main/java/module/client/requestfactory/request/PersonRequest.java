@@ -14,14 +14,14 @@ import com.google.web.bindery.requestfactory.shared.Service;
 
 @Service(value = PersonService.class, locator = GwtServiceLocator.class)
 public interface PersonRequest extends CrudRequest<PersonProxy, Long> {
-	
-	Request<PersonProxy> findOne(Long id);
-	
-	Request<PersonProxy> save(PersonProxy entityProxy);
-	
-	Request<Void> delete(Long id);
 
-	Request<Long> countAllPersons();
-	
-	Request<List<PersonProxy>> findAllPersons();
+    Request<PersonProxy> findOne(Long id);
+
+    Request<PersonProxy> save(PersonProxy entityProxy);
+
+    Request<Void> delete(Long id);
+
+    Request<Long> countAllPersons();
+
+    Request<List<PersonProxy>> findAllPersons();
 }

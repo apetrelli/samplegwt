@@ -16,27 +16,27 @@ import com.google.gwt.user.client.ui.AcceptsOneWidget;
  */
 public class WelcomeActivity extends AbstractActivity implements WelcomeView.Presenter {
 
-	private ClientFactory clientFactory;
-		
-	/**
-	 * Constructor of class.
-	 * @param place Current place.
-	 * @param clientFactory Factory to determine view.
-	 */
-	public WelcomeActivity(WelcomePlace place, ClientFactory clientFactory) {
-		this.clientFactory = clientFactory;
-	}
-	
-	@Override
-	public void start(AcceptsOneWidget panel, EventBus eventBus) {
-		final WelcomeView view = clientFactory.getWelcomeView();
-		view.setPresenter(this);
-		panel.setWidget(view);
-	}
+    private ClientFactory clientFactory;
 
-	@Override
-	public void goTo(Place place) {
-		clientFactory.getPlaceController().goTo(place);
-	}
+    /**
+     * Constructor of class.
+     * @param place Current place.
+     * @param clientFactory Factory to determine view.
+     */
+    public WelcomeActivity(WelcomePlace place, ClientFactory clientFactory) {
+        this.clientFactory = clientFactory;
+    }
+
+    @Override
+    public void start(AcceptsOneWidget panel, EventBus eventBus) {
+        final WelcomeView view = clientFactory.getWelcomeView();
+        view.setPresenter(this);
+        panel.setWidget(view);
+    }
+
+    @Override
+    public void goTo(Place place) {
+        clientFactory.getPlaceController().goTo(place);
+    }
 
 }

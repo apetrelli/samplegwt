@@ -20,31 +20,31 @@ import com.google.web.bindery.requestfactory.shared.ProxyFor;
 @ProxyFor(value = Person.class, locator = PersonLocator.class)
 @NameSurnameNotSame
 public interface PersonProxy extends EntityProxy {
-	
-	Long getId();
-	
-	Integer getVersion();
-	
-	@NotNull(message = "{personalTitleNotNull}")
-	PersonalTitle getPersonalTitle();
-	
-	void setPersonalTitle(PersonalTitle personalTitle);
-	
-	@NotEmpty
-	String getFirstName();
-	
-	void setFirstName(String firstName);
-	
-	@NotEmpty
-	String getLastName();
-	
-	void setLastName(String lastName);
-	
-	Date getBirthDate();
-	
-	void setBirthDate(Date birthDate);
-	
-	BigDecimal getAnnualIncome();
-	
-	void setAnnualIncome(BigDecimal annualIncome);
+
+    Long getId();
+
+    Integer getVersion();
+
+    @NotNull(message = "{personalTitleNotNull}")
+    PersonalTitle getPersonalTitle();
+
+    void setPersonalTitle(PersonalTitle personalTitle);
+
+    @NotEmpty
+    String getFirstName();
+
+    void setFirstName(String firstName);
+
+    @NotEmpty
+    String getLastName();
+
+    void setLastName(String lastName);
+
+    Date getBirthDate();
+
+    void setBirthDate(Date birthDate);
+
+    BigDecimal getAnnualIncome();
+
+    void setAnnualIncome(BigDecimal annualIncome);
 }

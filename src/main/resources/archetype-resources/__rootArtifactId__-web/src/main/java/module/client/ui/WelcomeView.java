@@ -12,21 +12,21 @@ import com.google.gwt.user.client.ui.IsWidget;
  */
 public interface WelcomeView extends IsWidget {
 
-	/**
-	 * Set the associated activity.
-	 * @param presenter associated Activity.
-	 */
-	void setPresenter(Presenter presenter);
-	
-	/**
-	 * Interface bridge to activity and view.
-	 *
-	 */
-	public interface Presenter {
-		/**
-		 * Redirect the user to the indicate  place.
-		 * @param place Place associated.
-		 */
-		void goTo(Place place);
-	}
+    /**
+     * Set the associated activity.
+     * @param presenter associated Activity.
+     */
+    void setPresenter(Presenter presenter);
+
+    /**
+     * Interface bridge to activity and view.
+     *
+     */
+    public interface Presenter {
+        /**
+         * Redirect the user to the indicate  place.
+         * @param place Place associated.
+         */
+        void goTo(Place place);
+    }
 }

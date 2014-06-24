@@ -10,7 +10,7 @@ import com.github.apetrelli.gwtintegration.service.CrudService;
 
 public interface PersonService extends CrudService<Person, Long> {
 
-	long countAllPersons();
-	
-	List<Person> findAllPersons();
+    long countAllPersons();
+
+    List<Person> findAllPersons();
 }

@@ -15,16 +15,16 @@ import com.google.web.bindery.event.shared.EventBus;
  *
  */
 public interface ClientFactory {
-	
-	EventBus getEventBus();
-	
-	PlaceController getPlaceController();
-	
-	HasBody getTemplate();
 
-	WelcomeView getWelcomeView();
-	
-	ListPersonsView getListPersonsView();
-	
-	PersonDetailView getPersonDetailView();
+    EventBus getEventBus();
+
+    PlaceController getPlaceController();
+
+    HasBody getTemplate();
+
+    WelcomeView getWelcomeView();
+
+    ListPersonsView getListPersonsView();
+
+    PersonDetailView getPersonDetailView();
 }

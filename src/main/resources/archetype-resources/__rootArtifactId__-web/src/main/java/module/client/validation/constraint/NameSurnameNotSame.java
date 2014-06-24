@@ -20,10 +20,10 @@ import javax.validation.Payload;
 @Documented
 public @interface NameSurnameNotSame {
 
-	/**
-	 * The message to show.
-	 */
-	String message() default "{nameSurnameNotSame}";
+    /**
+     * The message to show.
+     */
+    String message() default "{nameSurnameNotSame}";
 
     /**
      * The groups to apply to.

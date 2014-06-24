@@ -1,118 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>${groupId}</groupId>
-		<artifactId>${rootArtifactId}</artifactId>
-		<version>${version}</version>
-	</parent>
-	<artifactId>${artifactId}</artifactId>
-	<packaging>war</packaging>
-	<name>Sample GWT - Web project</name>
-	<description>The main web project</description>
-	<dependencies>
-		<dependency>
-			<groupId>${groupId}</groupId>
-			<artifactId>${rootArtifactId}-model</artifactId>
-			<version>${version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.apetrelli.gwtintegration</groupId>
-			<artifactId>gwt-integration-web</artifactId>
-			<version>${gwt.integration.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.gwt</groupId>
-			<artifactId>gwt-user</artifactId>
-			<version>${gwt.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.google.gwt</groupId>
-			<artifactId>gwt-servlet</artifactId>
-			<version>${gwt.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<version>2.2.9</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>4.1.0.Final</version>
-			<classifier>sources</classifier>
-		</dependency>
-		<dependency>
-			<groupId>com.github.apetrelli.gwtintegration</groupId>
-			<artifactId>gwt-integration-hibernate-validator</artifactId>
-			<version>${gwt.integration.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.2</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.apetrelli.gwtintegration</groupId>
-			<artifactId>gwt-integration-hibernate-entitymanager</artifactId>
-			<version>${gwt.integration.version}</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.github.apetrelli.gwtintegration</groupId>
-			<artifactId>gwt-integration-hibernate-core</artifactId>
-			<version>${gwt.integration.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.apetrelli.gwtintegration</groupId>
-			<artifactId>gwt-integration-spring-security</artifactId>
-			<version>${gwt.integration.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.apetrelli.gwtintegration</groupId>
-			<artifactId>gwt-integration-spring-web</artifactId>
-			<version>${gwt.integration.version}</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.github.apetrelli.gwtintegration</groupId>
-			<artifactId>gwt-integration-remote-logging</artifactId>
-			<version>${gwt.integration.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.apetrelli.gwtintegration</groupId>
-			<artifactId>gwt-integration-widget</artifactId>
-			<version>${gwt.integration.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.apetrelli.gwtintegration</groupId>
-			<artifactId>gwt-integration-mvp</artifactId>
-			<version>${gwt.integration.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.apetrelli.gwtintegration</groupId>
-			<artifactId>gwt-integration-error</artifactId>
-			<version>${gwt.integration.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.apetrelli.gwtintegration</groupId>
-			<artifactId>gwt-integration-util</artifactId>
-			<version>${gwt.integration.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.codeartisans</groupId>
-			<artifactId>org.json</artifactId>
-			<version>20131017</version>
-		</dependency>
-	</dependencies>
-	<build>
-		<finalName>${rootArtifactId}</finalName>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>${groupId}</groupId>
+    <artifactId>${rootArtifactId}</artifactId>
+    <version>${version}</version>
+  </parent>
+  <artifactId>${artifactId}</artifactId>
+  <packaging>war</packaging>
+  <name>Sample GWT - Web project</name>
+  <description>The main web project</description>
+  <dependencies>
+    <dependency>
+      <groupId>${groupId}</groupId>
+      <artifactId>${rootArtifactId}-model</artifactId>
+      <version>${version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.apetrelli.gwtintegration</groupId>
+      <artifactId>gwt-integration-web</artifactId>
+      <version>${gwt.integration.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-user</artifactId>
+      <version>${gwt.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-servlet</artifactId>
+      <version>${gwt.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+      <version>2.2.9</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>4.1.0.Final</version>
+      <classifier>sources</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.github.apetrelli.gwtintegration</groupId>
+      <artifactId>gwt-integration-hibernate-validator</artifactId>
+      <version>${gwt.integration.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.apetrelli.gwtintegration</groupId>
+      <artifactId>gwt-integration-hibernate-entitymanager</artifactId>
+      <version>${gwt.integration.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.apetrelli.gwtintegration</groupId>
+      <artifactId>gwt-integration-hibernate-core</artifactId>
+      <version>${gwt.integration.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.apetrelli.gwtintegration</groupId>
+      <artifactId>gwt-integration-spring-security</artifactId>
+      <version>${gwt.integration.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.apetrelli.gwtintegration</groupId>
+      <artifactId>gwt-integration-spring-web</artifactId>
+      <version>${gwt.integration.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.apetrelli.gwtintegration</groupId>
+      <artifactId>gwt-integration-remote-logging</artifactId>
+      <version>${gwt.integration.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.apetrelli.gwtintegration</groupId>
+      <artifactId>gwt-integration-widget</artifactId>
+      <version>${gwt.integration.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.apetrelli.gwtintegration</groupId>
+      <artifactId>gwt-integration-mvp</artifactId>
+      <version>${gwt.integration.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.apetrelli.gwtintegration</groupId>
+      <artifactId>gwt-integration-error</artifactId>
+      <version>${gwt.integration.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.apetrelli.gwtintegration</groupId>
+      <artifactId>gwt-integration-util</artifactId>
+      <version>${gwt.integration.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codeartisans</groupId>
+      <artifactId>org.json</artifactId>
+      <version>20131017</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>${rootArtifactId}</finalName>
     <resources>
       <resource>
         <directory>src/main/resources</directory>
@@ -124,133 +125,135 @@
         </includes>
       </resource>
     </resources>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
-				<!-- Note 2.8 does not work with AspectJ aspect path -->
-				<configuration>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>false</downloadJavadocs>
-					<wtpversion>2.0</wtpversion>
-					<additionalBuildcommands>
-						<buildCommand>
-							<name>org.springframework.ide.eclipse.core.springbuilder</name>
-						</buildCommand>
-						<buildCommand>
-							<name>com.google.gwt.eclipse.core.gwtProjectValidator</name>
-						</buildCommand>
-					</additionalBuildcommands>
-					<additionalProjectnatures>
-						<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
-						<projectnature>com.google.gwt.eclipse.core.gwtNature</projectnature>
-					</additionalProjectnatures>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>gwt-maven-plugin</artifactId>
-				<version>${gwt.version}</version>
-				<configuration>
-					<logLevel>INFO</logLevel>
-					<style>OBF</style>
-					<runTarget>/index.html</runTarget>
-					<hostedWebapp>${project.build.directory}/${project.build.finalName}</hostedWebapp>
-					<modules>
-						<module>${package}.module.${moduleName}</module>
-					</modules>
-					<copyWebapp>true</copyWebapp>
-					<!-- Triggering threaded compilation to save memory.
-					The number of threads are set to 10, however the ThreadedPermutationWorkerFactory uses a maximum
-					of threads calculated as the minimum between the number of <localWorkers> and this value (10).
-					If the <localWorkers> is not specified, the Maven plugin calculates the values as the number
-					of processor threads, so usually they are lower than 10.-->
-					<extraJvmArgs>-Dgwt.jjs.permutationWorkerFactory=com.google.gwt.dev.ThreadedPermutationWorkerFactory -Dgwt.jjs.maxThreads=10</extraJvmArgs>
-				</configuration>
-				<executions>
-					<execution>
-						<id>gwtcompile</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-					</execution>
-				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>com.google.gwt</groupId>
-						<artifactId>gwt-dev</artifactId>
-						<version>${gwt.version}</version>
-					</dependency>
-					<dependency>
-						<groupId>com.google.gwt</groupId>
-						<artifactId>gwt-user</artifactId>
-						<version>${gwt.version}</version>
-					</dependency>
-					<dependency>
-						<groupId>org.hibernate</groupId>
-						<artifactId>hibernate-validator</artifactId>
-						<version>4.1.0.Final</version>
-						<classifier>sources</classifier>
-					</dependency>
-				</dependencies>
-			</plugin>
-			<plugin>
-				<groupId>org.bsc.maven</groupId>
-				<artifactId>maven-processor-plugin</artifactId>
-				<version>2.0.5</version>
-				<executions>
-					<execution>
-						<id>process</id>
-						<goals>
-							<goal>process</goal>
-						</goals>
-						<phase>generate-sources</phase>
-					</execution>
-				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>com.google.web.bindery</groupId>
-						<artifactId>requestfactory-apt</artifactId>
-						<version>${gwt.version}</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-		</plugins>
-		<pluginManagement>
-			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.bsc.maven</groupId>
-										<artifactId>maven-processor-plugin</artifactId>
-										<versionRange>[2.0.5,)</versionRange>
-										<goals>
-											<goal>process</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
-	<profiles>
-		<profile>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <version>2.9</version>
+        <!-- Note 2.8 does not work with AspectJ aspect path -->
+        <configuration>
+          <downloadSources>true</downloadSources>
+          <downloadJavadocs>false</downloadJavadocs>
+          <wtpversion>2.0</wtpversion>
+          <additionalBuildcommands>
+            <buildCommand>
+              <name>org.springframework.ide.eclipse.core.springbuilder</name>
+            </buildCommand>
+            <buildCommand>
+              <name>com.google.gwt.eclipse.core.gwtProjectValidator</name>
+            </buildCommand>
+          </additionalBuildcommands>
+          <additionalProjectnatures>
+            <projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+            <projectnature>com.google.gwt.eclipse.core.gwtNature</projectnature>
+          </additionalProjectnatures>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>gwt-maven-plugin</artifactId>
+        <version>${gwt.version}</version>
+        <configuration>
+          <logLevel>INFO</logLevel>
+          <style>OBF</style>
+          <runTarget>/index.html</runTarget>
+          <hostedWebapp>${project.build.directory}/${project.build.finalName}</hostedWebapp>
+          <modules>
+            <module>${package}.module.${moduleName}</module>
+          </modules>
+          <copyWebapp>true</copyWebapp>
+          <!-- Triggering threaded compilation to save memory. The number of threads
+            are set to 10, however the ThreadedPermutationWorkerFactory uses a maximum
+            of threads calculated as the minimum between the number of <localWorkers>
+            and this value (10). If the <localWorkers> is not specified, the Maven plugin
+            calculates the values as the number of processor threads, so usually they
+            are lower than 10. -->
+          <extraJvmArgs>-Dgwt.jjs.permutationWorkerFactory=com.google.gwt.dev.ThreadedPermutationWorkerFactory
+            -Dgwt.jjs.maxThreads=10</extraJvmArgs>
+        </configuration>
+        <executions>
+          <execution>
+            <id>gwtcompile</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
+        <dependencies>
+          <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <version>${gwt.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+            <version>${gwt.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>4.1.0.Final</version>
+            <classifier>sources</classifier>
+          </dependency>
+        </dependencies>
+      </plugin>
+      <plugin>
+        <groupId>org.bsc.maven</groupId>
+        <artifactId>maven-processor-plugin</artifactId>
+        <version>2.0.5</version>
+        <executions>
+          <execution>
+            <id>process</id>
+            <goals>
+              <goal>process</goal>
+            </goals>
+            <phase>generate-sources</phase>
+          </execution>
+        </executions>
+        <dependencies>
+          <dependency>
+            <groupId>com.google.web.bindery</groupId>
+            <artifactId>requestfactory-apt</artifactId>
+            <version>${gwt.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+    <pluginManagement>
+      <plugins>
+        <!--This plugin's configuration is used to store Eclipse m2e settings
+          only. It has no influence on the Maven build itself. -->
+        <plugin>
+          <groupId>org.eclipse.m2e</groupId>
+          <artifactId>lifecycle-mapping</artifactId>
+          <version>1.0.0</version>
+          <configuration>
+            <lifecycleMappingMetadata>
+              <pluginExecutions>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.bsc.maven</groupId>
+                    <artifactId>maven-processor-plugin</artifactId>
+                    <versionRange>[2.0.5,)</versionRange>
+                    <goals>
+                      <goal>process</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <ignore />
+                  </action>
+                </pluginExecution>
+              </pluginExecutions>
+            </lifecycleMappingMetadata>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+  <profiles>
+    <profile>
       <id>production</id>
       <activation>
         <activeByDefault>true</activeByDefault>
@@ -288,15 +291,15 @@
       </build>
     </profile>
     <profile>
-			<id>development</id>
-			<build>
+      <id>development</id>
+      <build>
         <resources>
           <resource>
             <directory>src/main/development-resources</directory>
           </resource>
         </resources>
-				<plugins>
-					<plugin>
+        <plugins>
+          <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>build-helper-maven-plugin</artifactId>
             <version>1.7</version>
@@ -316,86 +319,87 @@
               </execution>
             </executions>
           </plugin>
-	      <plugin>
-	        <groupId>org.codehaus.mojo</groupId>
-	        <artifactId>gwt-maven-plugin</artifactId>
-	        <version>${gwt.version}</version>
-	        <configuration>
-	          <logLevel>INFO</logLevel>
-	          <style>PRETTY</style>
-	          <draftCompile>true</draftCompile>
-	          <saveSource>true</saveSource>
-              <extra>${project.build.directory}/gwt-extra</extra>
-	          <runTarget>/index.html</runTarget>
-	          <hostedWebapp>${project.build.directory}/${project.build.finalName}</hostedWebapp>
-	          <modules>
-	            <module>${package}.module.${moduleName}</module>
-	          </modules>
-	          <copyWebapp>true</copyWebapp>
-	          <webappDirectory>${project.build.directory}/gwt-development</webappDirectory>
-	          <!-- Triggering threaded compilation to save memory. The number of threads
-	            are set to 10, however the ThreadedPermutationWorkerFactory uses a maximum
-	            of threads calculated as the minimum between the number of <localWorkers>
-	            and this value (10). If the <localWorkers> is not specified, the Maven plugin
-	            calculates the values as the number of processor threads, so usually they
-	            are lower than 10. -->
-	          <extraJvmArgs>-Dgwt.jjs.permutationWorkerFactory=com.google.gwt.dev.ThreadedPermutationWorkerFactory -Dgwt.jjs.maxThreads=10</extraJvmArgs>
-	        </configuration>
-	        <executions>
-	          <execution>
-	            <id>gwtcompile</id>
-	            <phase>prepare-package</phase>
-	            <goals>
-	              <goal>compile</goal>
-	            </goals>
-	          </execution>
-	        </executions>
-	        <dependencies>
-	          <dependency>
-	            <groupId>com.google.gwt</groupId>
-	            <artifactId>gwt-dev</artifactId>
-	            <version>${gwt.version}</version>
-	          </dependency>
-	          <dependency>
-	            <groupId>com.google.gwt</groupId>
-	            <artifactId>gwt-user</artifactId>
-	            <version>${gwt.version}</version>
-	          </dependency>
-	          <dependency>
-	            <groupId>org.hibernate</groupId>
-	            <artifactId>hibernate-validator</artifactId>
-	            <version>4.1.0.Final</version>
-	            <classifier>sources</classifier>
-	          </dependency>
-	        </dependencies>
-	      </plugin>
           <plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-war-plugin</artifactId>
-						<version>2.4</version>
-						<configuration>
-							<webResources>
-								<resource>
-									<directory>src/main/extra-webapp</directory>
-								</resource>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>gwt-maven-plugin</artifactId>
+            <version>${gwt.version}</version>
+            <configuration>
+              <logLevel>INFO</logLevel>
+              <style>PRETTY</style>
+              <draftCompile>true</draftCompile>
+              <saveSource>true</saveSource>
+              <extra>${project.build.directory}/gwt-extra</extra>
+              <runTarget>/index.html</runTarget>
+              <hostedWebapp>${project.build.directory}/${project.build.finalName}</hostedWebapp>
+              <modules>
+                <module>${package}.module.${moduleName}</module>
+              </modules>
+              <copyWebapp>true</copyWebapp>
+              <webappDirectory>${project.build.directory}/gwt-development</webappDirectory>
+              <!-- Triggering threaded compilation to save memory. The number of
+                threads are set to 10, however the ThreadedPermutationWorkerFactory uses
+                a maximum of threads calculated as the minimum between the number of <localWorkers>
+                and this value (10). If the <localWorkers> is not specified, the Maven plugin
+                calculates the values as the number of processor threads, so usually they
+                are lower than 10. -->
+              <extraJvmArgs>-Dgwt.jjs.permutationWorkerFactory=com.google.gwt.dev.ThreadedPermutationWorkerFactory
+                -Dgwt.jjs.maxThreads=10</extraJvmArgs>
+            </configuration>
+            <executions>
+              <execution>
+                <id>gwtcompile</id>
+                <phase>prepare-package</phase>
+                <goals>
+                  <goal>compile</goal>
+                </goals>
+              </execution>
+            </executions>
+            <dependencies>
+              <dependency>
+                <groupId>com.google.gwt</groupId>
+                <artifactId>gwt-dev</artifactId>
+                <version>${gwt.version}</version>
+              </dependency>
+              <dependency>
+                <groupId>com.google.gwt</groupId>
+                <artifactId>gwt-user</artifactId>
+                <version>${gwt.version}</version>
+              </dependency>
+              <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>4.1.0.Final</version>
+                <classifier>sources</classifier>
+              </dependency>
+            </dependencies>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>2.4</version>
+            <configuration>
+              <webResources>
+                <resource>
+                  <directory>src/main/extra-webapp</directory>
+                </resource>
                 <resource>
                   <directory>${project.build.directory}/gwt-development</directory>
                 </resource>
                 <resource>
                   <directory>${project.build.directory}/gwt-extra</directory>
                   <excludes>
-                  	<exclude>${project.build.finalName}/src/**</exclude>
+                    <exclude>${project.build.finalName}/src/**</exclude>
                   </excludes>
                 </resource>
                 <resource>
                   <directory>${project.build.directory}/gwt-extra/${project.build.finalName}/src</directory>
                   <targetPath>${project.build.finalName}/symbolMaps</targetPath>
                 </resource>
-							</webResources>
-						</configuration>
-					</plugin>
-      				</plugins>
-			</build>
-		</profile>
-	</profiles>
+              </webResources>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>

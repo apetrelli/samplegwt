@@ -18,19 +18,19 @@ import ${package}.model.service.PersonService;
 @Service
 @Transactional(readOnly=true)
 public class PersonServiceImpl extends AbstractCrudService<Person, Long, PersonRepository> implements PersonService{
-	
-	private final Sort defaultSort = new Sort("lastName");
-	
-	@Autowired
-	public PersonServiceImpl(PersonRepository repository) {
-		super(repository);
-	}
-	
-	public long countAllPersons() {
-		return repository.count();
-	}
 
-	public List<Person> findAllPersons() {
-		return repository.findAll(defaultSort);
-	}
+    private final Sort defaultSort = new Sort("lastName");
+
+    @Autowired
+    public PersonServiceImpl(PersonRepository repository) {
+        super(repository);
+    }
+
+    public long countAllPersons() {
+        return repository.count();
+    }
+
+    public List<Person> findAllPersons() {
+        return repository.findAll(defaultSort);
+    }
 }

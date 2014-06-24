@@ -3,17 +3,17 @@
 #set( $symbol_escape = '\' )
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui"
-	xmlns:e="urn:import:${package}.module.client.ui.editor"
-	xmlns:ew="urn:import:com.github.apetrelli.gwtintegration.editor.client.widget">
-	<ui:style>
-		
-	</ui:style>
-	<ui:with type="${package}.module.client.i18n.MainMessages" field="messages" />
-	<g:FlowPanel>
-		<ew:SimpleConstraintViolationDisplayer ui:field="genericDisplayer" />
-		<e:PersonEditor ui:field="editor" />
-		<g:Button ui:field="save" text="{messages.save}" />
-		<g:Button ui:field="delete" text="{messages.delete}" />
-	</g:FlowPanel>
-</ui:UiBinder> 
+  xmlns:g="urn:import:com.google.gwt.user.client.ui"
+  xmlns:e="urn:import:${package}.module.client.ui.editor"
+  xmlns:ew="urn:import:com.github.apetrelli.gwtintegration.editor.client.widget">
+  <ui:style>
+
+  </ui:style>
+  <ui:with type="${package}.module.client.i18n.MainMessages" field="messages" />
+  <g:FlowPanel>
+    <ew:SimpleConstraintViolationDisplayer ui:field="genericDisplayer" />
+    <e:PersonEditor ui:field="editor" />
+    <g:Button ui:field="save" text="{messages.save}" />
+    <g:Button ui:field="delete" text="{messages.delete}" />
+  </g:FlowPanel>
+</ui:UiBinder>

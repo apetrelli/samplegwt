@@ -9,16 +9,16 @@ import com.github.apetrelli.gwtintegration.editor.client.editor.ConstraintViolat
 import com.github.apetrelli.gwtintegration.mvp.client.ui.MvpView;
 
 public interface PersonDetailView extends MvpView<PersonDetailView.Presenter> {
-	
-	PersonEditor getEditor();
-	
+
+    PersonEditor getEditor();
+
     ConstraintViolationDisplayer getGenericDisplayer();
 
-	void canDelete(boolean canDelete);
-	
-	public interface Presenter extends MvpView.Presenter {
-		void save();
-		
-		void delete();
-	}
+    void canDelete(boolean canDelete);
+
+    public interface Presenter extends MvpView.Presenter {
+        void save();
+
+        void delete();
+    }
 }

@@ -7,21 +7,21 @@ import org.springframework.security.core.GrantedAuthority;
 
 public class SampleAuthority implements GrantedAuthority {
 
-	private static final long serialVersionUID = -4504114106906301183L;
+    private static final long serialVersionUID = -4504114106906301183L;
 
-	private String authority;
-	
-	public static final SampleAuthority READER = new SampleAuthority("READER");
+    private String authority;
 
-	public static final SampleAuthority WRITER = new SampleAuthority("WRITER");
+    public static final SampleAuthority READER = new SampleAuthority("READER");
 
-	private SampleAuthority(String authority) {
-		this.authority = authority;
-	}
+    public static final SampleAuthority WRITER = new SampleAuthority("WRITER");
 
-	@Override
-	public String getAuthority() {
-		return authority;
-	}
+    private SampleAuthority(String authority) {
+        this.authority = authority;
+    }
+
+    @Override
+    public String getAuthority() {
+        return authority;
+    }
 
 }

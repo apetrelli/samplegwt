@@ -13,14 +13,14 @@ import com.google.gwt.validation.client.impl.AbstractGwtValidator;
 
 public class ValidatorFactory extends AbstractGwtValidatorFactory {
 
-	@GwtValidation({PersonProxy.class})
-	public interface GwtValidator extends Validator {
-		
-	}
-	
-	@Override
-	public AbstractGwtValidator createValidator() {
-		return GWT.create(GwtValidator.class);
-	}
+    @GwtValidation({PersonProxy.class})
+    public interface GwtValidator extends Validator {
+
+    }
+
+    @Override
+    public AbstractGwtValidator createValidator() {
+        return GWT.create(GwtValidator.class);
+    }
 
 }

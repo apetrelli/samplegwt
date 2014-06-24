@@ -3,18 +3,18 @@
 #set( $symbol_escape = '\' )
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
-	<ui:style>
-		.important {
-			font-weight: bold;
-		}
-		
-		.sideBySide {
-			float: left;
-		}
-	</ui:style>
-	<ui:with type="${package}.module.client.i18n.MainMessages" field="messages" />
-	<g:FlowPanel>
-		<g:Label text="{messages.welcomeText}" />
-	</g:FlowPanel>
-</ui:UiBinder> 
+  xmlns:g="urn:import:com.google.gwt.user.client.ui">
+  <ui:style>
+    .important {
+      font-weight: bold;
+    }
+
+    .sideBySide {
+      float: left;
+    }
+  </ui:style>
+  <ui:with type="${package}.module.client.i18n.MainMessages" field="messages" />
+  <g:FlowPanel>
+    <g:Label text="{messages.welcomeText}" />
+  </g:FlowPanel>
+</ui:UiBinder>

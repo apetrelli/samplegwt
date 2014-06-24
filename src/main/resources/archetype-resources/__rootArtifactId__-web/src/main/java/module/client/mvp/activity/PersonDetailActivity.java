@@ -19,67 +19,67 @@ import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.web.bindery.requestfactory.gwt.client.RequestFactoryEditorDriver;
 
 public class PersonDetailActivity extends BaseActivity implements PersonDetailView.Presenter {
-	
-	private Long id;
-	
-	interface Driver extends RequestFactoryEditorDriver<PersonProxy, PersonEditor> {};
-	
-	private Driver driver;
-	
-	private EditorWorkflow<PersonProxy, PersonRequest, PersonEditor, Long> workflow;
 
-	public PersonDetailActivity(PersonDetailPlace place, ApplicationRequestFactory requestFactory, ClientFactory clientFactory) {
-		super(requestFactory, clientFactory);
-		id = place.getId();
-		driver = GWT.create(Driver.class);
-		PersonDetailView view = clientFactory.getPersonDetailView();
-		workflow = new EditorWorkflow<PersonProxy, PersonRequest, PersonEditor, Long>(requestFactory, driver, view.getEditor(), view.getGenericDisplayer()) {
+    private Long id;
 
-			@Override
-			protected PersonRequest getNewRequestContext() {
-				return PersonDetailActivity.this.requestFactory.personRequest();
-			}
+    interface Driver extends RequestFactoryEditorDriver<PersonProxy, PersonEditor> {};
 
-			@Override
-			protected Class<PersonProxy> getEntityProxyClass() {
-				return PersonProxy.class;
-			}
-			
-			@Override
-			protected Long getEntityId(PersonProxy entityProxy) {
-				return entityProxy.getId();
-			}
+    private Driver driver;
 
-			@Override
-			protected void afterSave(PersonProxy response) {
-				Window.alert("Save successful!");
-				goTo(new PersonDetailPlace(response.getId()));
-			}
-			
-			@Override
-			protected void afterDelete() {
-				Window.alert("Delete successful!");
-				goTo(new ListPersonsPlace());
-			}
-		};
-	}
+    private EditorWorkflow<PersonProxy, PersonRequest, PersonEditor, Long> workflow;
 
-	@Override
-	public void start(final AcceptsOneWidget panel, EventBus eventBus) {
-		PersonDetailView view = clientFactory.getPersonDetailView();
-		view.setPresenter(this);
-		view.canDelete(id != null);
-		panel.setWidget(view);
-		workflow.start(id);
-	}
-	
-	@Override
-	public void save() {
-		workflow.save();
-	}
-	
-	@Override
-	public void delete() {
-		workflow.delete();
-	}
+    public PersonDetailActivity(PersonDetailPlace place, ApplicationRequestFactory requestFactory, ClientFactory clientFactory) {
+        super(requestFactory, clientFactory);
+        id = place.getId();
+        driver = GWT.create(Driver.class);
+        PersonDetailView view = clientFactory.getPersonDetailView();
+        workflow = new EditorWorkflow<PersonProxy, PersonRequest, PersonEditor, Long>(requestFactory, driver, view.getEditor(), view.getGenericDisplayer()) {
+
+            @Override
+            protected PersonRequest getNewRequestContext() {
+                return PersonDetailActivity.this.requestFactory.personRequest();
+            }
+
+            @Override
+            protected Class<PersonProxy> getEntityProxyClass() {
+                return PersonProxy.class;
+            }
+
+            @Override
+            protected Long getEntityId(PersonProxy entityProxy) {
+                return entityProxy.getId();
+            }
+
+            @Override
+            protected void afterSave(PersonProxy response) {
+                Window.alert("Save successful!");
+                goTo(new PersonDetailPlace(response.getId()));
+            }
+
+            @Override
+            protected void afterDelete() {
+                Window.alert("Delete successful!");
+                goTo(new ListPersonsPlace());
+            }
+        };
+    }
+
+    @Override
+    public void start(final AcceptsOneWidget panel, EventBus eventBus) {
+        PersonDetailView view = clientFactory.getPersonDetailView();
+        view.setPresenter(this);
+        view.canDelete(id != null);
+        panel.setWidget(view);
+        workflow.start(id);
+    }
+
+    @Override
+    public void save() {
+        workflow.save();
+    }
+
+    @Override
+    public void delete() {
+        workflow.delete();
+    }
 }

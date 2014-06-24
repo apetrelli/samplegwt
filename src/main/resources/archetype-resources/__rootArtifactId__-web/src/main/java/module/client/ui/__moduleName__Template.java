@@ -14,20 +14,20 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class ${moduleName}Template extends Composite implements HasBody {
 
-	private static ${moduleName}TemplateUiBinder uiBinder = GWT
-			.create(${moduleName}TemplateUiBinder.class);
-	@UiField SimplePanel body;
+    private static ${moduleName}TemplateUiBinder uiBinder = GWT
+            .create(${moduleName}TemplateUiBinder.class);
+    @UiField SimplePanel body;
 
-	interface ${moduleName}TemplateUiBinder extends
-			UiBinder<Widget, ${moduleName}Template> {
-	}
+    interface ${moduleName}TemplateUiBinder extends
+            UiBinder<Widget, ${moduleName}Template> {
+    }
 
-	public ${moduleName}Template() {
-		initWidget(uiBinder.createAndBindUi(this));
-	}
-	
-	@Override
-	public AcceptsOneWidget getBody() {
-		return body;
-	}
+    public ${moduleName}Template() {
+        initWidget(uiBinder.createAndBindUi(this));
+    }
+
+    @Override
+    public AcceptsOneWidget getBody() {
+        return body;
+    }
 }

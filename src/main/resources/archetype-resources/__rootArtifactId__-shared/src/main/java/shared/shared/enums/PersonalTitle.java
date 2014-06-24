@@ -4,5 +4,5 @@
 package ${package}.shared.shared.enums;
 
 public enum PersonalTitle {
-	MR, MISS, MRS, MS;
+    MR, MISS, MRS, MS;
 }

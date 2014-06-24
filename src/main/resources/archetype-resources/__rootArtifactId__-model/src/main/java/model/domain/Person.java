@@ -20,72 +20,72 @@ import ${package}.shared.shared.enums.PersonalTitle;
 @Entity
 @EntityListeners({ DeleteEntityListener.class })
 public class Person extends AbstractDeletable {
-	
-	@Id
-	@GeneratedValue
-	private Long id;
-	
-	@Version
-	private Integer version;
-	
-	@NotNull
-	private PersonalTitle personalTitle;
-	
-	@NotNull
-	private String firstName;
-	
-	@NotNull
-	private String lastName;
-	
-	private Date birthDate;
-	
-	private BigDecimal annualIncome;
 
-	public Long getId() {
-		return id;
-	}
-	
-	public Integer getVersion() {
-		return version;
-	}
-	
-	public PersonalTitle getPersonalTitle() {
-		return personalTitle;
-	}
+    @Id
+    @GeneratedValue
+    private Long id;
 
-	public void setPersonalTitle(PersonalTitle personalTitle) {
-		this.personalTitle = personalTitle;
-	}
+    @Version
+    private Integer version;
 
-	public String getFirstName() {
-		return firstName;
-	}
+    @NotNull
+    private PersonalTitle personalTitle;
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    @NotNull
+    private String firstName;
 
-	public String getLastName() {
-		return lastName;
-	}
+    @NotNull
+    private String lastName;
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    private Date birthDate;
 
-	public Date getBirthDate() {
-		return birthDate;
-	}
-	
-	public void setBirthDate(Date birthDate) {
-		this.birthDate = birthDate;
-	}
-	
-	public BigDecimal getAnnualIncome() {
-		return annualIncome;
-	}
-	
-	public void setAnnualIncome(BigDecimal annualIncome) {
-		this.annualIncome = annualIncome;
-	}
+    private BigDecimal annualIncome;
+
+    public Long getId() {
+        return id;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public PersonalTitle getPersonalTitle() {
+        return personalTitle;
+    }
+
+    public void setPersonalTitle(PersonalTitle personalTitle) {
+        this.personalTitle = personalTitle;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public BigDecimal getAnnualIncome() {
+        return annualIncome;
+    }
+
+    public void setAnnualIncome(BigDecimal annualIncome) {
+        this.annualIncome = annualIncome;
+    }
 }

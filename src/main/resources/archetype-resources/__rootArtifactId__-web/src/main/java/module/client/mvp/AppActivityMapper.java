@@ -20,31 +20,31 @@ import com.google.gwt.place.shared.Place;
  *
  */
 public class AppActivityMapper implements ActivityMapper {
-	
-	private ClientFactory clientFactory;
-	
-	private ApplicationRequestFactory requestFactory;
 
-	/**
-	 * Constructor of class.
-	 * @param clientFactory Factory to determinate view.
-	 * @param requestFactory Factory to determinate service to call.
-	 */
-	public AppActivityMapper(ClientFactory clientFactory, ApplicationRequestFactory requestFactory) {
-		this.clientFactory = clientFactory;
-		this.requestFactory = requestFactory;
-	}
+    private ClientFactory clientFactory;
 
-	@Override
-	public Activity getActivity(Place place) {
-		if (place instanceof WelcomePlace) {
-			return new WelcomeActivity((WelcomePlace) place, clientFactory);
-		} else if (place instanceof ListPersonsPlace) {
-			return new ListPersonsActivity(requestFactory, clientFactory);
-		} else if (place instanceof PersonDetailPlace) {
-			return new PersonDetailActivity((PersonDetailPlace) place, requestFactory, clientFactory);
-		}
-		return null;
-	}
+    private ApplicationRequestFactory requestFactory;
+
+    /**
+     * Constructor of class.
+     * @param clientFactory Factory to determinate view.
+     * @param requestFactory Factory to determinate service to call.
+     */
+    public AppActivityMapper(ClientFactory clientFactory, ApplicationRequestFactory requestFactory) {
+        this.clientFactory = clientFactory;
+        this.requestFactory = requestFactory;
+    }
+
+    @Override
+    public Activity getActivity(Place place) {
+        if (place instanceof WelcomePlace) {
+            return new WelcomeActivity((WelcomePlace) place, clientFactory);
+        } else if (place instanceof ListPersonsPlace) {
+            return new ListPersonsActivity(requestFactory, clientFactory);
+        } else if (place instanceof PersonDetailPlace) {
+            return new PersonDetailActivity((PersonDetailPlace) place, requestFactory, clientFactory);
+        }
+        return null;
+    }
 
 }
