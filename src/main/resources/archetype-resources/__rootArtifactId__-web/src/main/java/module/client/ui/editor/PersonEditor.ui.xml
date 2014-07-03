@@ -15,7 +15,7 @@
     <g:Label text="{messages.personalTitle}" />
     <e1:LeafValueEditorDecorator ui:field="personalTitle">
       <e1:valuebox>
-        <e1:ValueListBox ui:field="personalTitleListBox" />
+        <g:ValueListBox ui:field="personalTitleListBox" />
       </e1:valuebox>
     </e1:LeafValueEditorDecorator>
     <g:Label text="{messages.firstName}" />

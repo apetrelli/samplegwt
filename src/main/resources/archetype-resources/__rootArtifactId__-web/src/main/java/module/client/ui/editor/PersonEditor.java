@@ -12,7 +12,6 @@ import java.util.List;
 
 import com.github.apetrelli.gwtintegration.editor.client.widget.LeafValueEditorDecorator;
 import com.github.apetrelli.gwtintegration.editor.client.widget.ValueDateBox;
-import com.github.apetrelli.gwtintegration.editor.client.widget.ValueListBox;
 import ${package}.module.client.requestfactory.proxy.PersonProxy;
 import ${package}.shared.shared.enums.PersonalTitle;
 import com.google.gwt.core.client.GWT;
@@ -22,6 +21,7 @@ import com.google.gwt.text.shared.Renderer;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.ValueListBox;
 import com.google.gwt.user.client.ui.Widget;
 
 public class PersonEditor extends Composite implements Editor<PersonProxy>{
